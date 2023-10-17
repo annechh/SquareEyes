@@ -84,7 +84,7 @@ a:visited {
 /*=======================Main under=======================*/
 
 main {
-    padding-top: 60px;
+    padding-top: 100px;
     padding-bottom: 100px;
 }
 
@@ -96,8 +96,7 @@ main {
 .line {
     background-color: var(--white);
     height: 2px;
-    width: 200px;
-    margin-bottom: 150px;  
+    width: 200px; 
 }
 
 h1 {
@@ -105,18 +104,41 @@ h1 {
     justify-content: center;
 }
 
-.box1 {
+.box1, .box2, .box3  {
     display: flex;
     justify-content: center;
+    padding-top: 80px;
 }
 
 .box1 img {
-    max-width: 500px;
+    max-width: 600px;
+    padding-right: 40px;
+}
+
+.box2 img {
+    max-width: 600px;
+    padding-left: 40px;
+}
+
+.box4 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.box4 img {
+    height: 80px;
 }
 
 .textbox {
-    max-width: 500px;
+    max-width: 600px;
+    text-align: center;
+    align-self: center;
+    font-size: large;
 }
+
+/*=======================Main above=======================*/
 
 /*--------------------Footer under--------------------*/
 
