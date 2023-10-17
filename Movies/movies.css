@@ -1,0 +1,124 @@
+@import url(/SquareEyes/footer.css);
+@import url(/SquareEyes/menu.css);
+
+:root {
+    --background: #0E0E0E;
+    --shadow: #0e0e0ee4;
+    --white: #d9d9d9;
+    --darkblue: #072531;
+    --lightblue: #229FCF;
+    --green: #06A917;
+    --footer: #0A0A0A;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0;
+    color: var(--white);
+}
+
+.background-container img {
+    position:absolute;
+    max-width: 100%;
+    z-index: -1;
+    
+}
+
+
+/*=======================Main under=======================*/
+
+main {
+    padding-bottom: 60px;
+}
+
+
+
+
+/* ---------------- All movies under ---------------*/
+
+
+
+.sectionmovies1 {
+    padding-top: 35%; 
+    z-index: 2;    
+}
+
+.container {
+    margin: 0 5%;
+    padding-top: 2%;
+    z-index: 2;
+}
+
+.title-container {
+    padding-bottom: 5px;
+    z-index: 2;
+    position: absolute;
+}
+
+.title-headline {
+    margin: 0;
+    z-index: 2;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    z-index: 2;
+}
+
+.textoverlaymovie {
+    color: var(--white);
+    font-size: 0.6vw;
+    padding: 5px 0px 0px 5px;
+    transition: transform 0.3s ease;
+    z-index: 2;
+} 
+
+h3 {
+    margin: 0;
+}
+
+.movieImg .movie{
+    max-width: 450px;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+
+.movieImg .movie:hover{
+    transition: 0.3s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.movieImgtall .movie {
+    max-width: 450px;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.movieImgtall .movie:hover{
+    transition: 0.3s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/*----------------All movies above--------------*/
+
+
+
+/* @media screen and(max-width: 2160px) {
+    .movieImgtall img {
+        max-width: 200px;
+        transition: transform 0.3s ease;
+        z-index: 2;
+    }
+    .movieImg img{
+        max-width: 200px;
+        transition: transform 0.3s ease;
+        z-index: 2;
+    }
+} */

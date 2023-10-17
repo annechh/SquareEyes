@@ -1,3 +1,6 @@
+@import url(/SquareEyes/footer.css);
+@import url(/SquareEyes/menu.css);
+
 :root {
     --background: #0E0E0E;
     --white: #d9d9d9;
@@ -14,78 +17,6 @@ body {
     color: var(--white);
     font-family: 'Cairo', sans-serif;
 }
-
-
-
-
-
-/*------------------ Menu under ------------------*/
-
-.navmodul {
-    position: relative;
-    width: 100%;
-    height: 150px;
-}
-
-.sectionnav {
-    display: flex;
-    height: inherit;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.logo {
-    position: absolute;
-    cursor: pointer;
-    width: auto;
-    height: 100px;
-    top: 15%;
-    left: 2%;
-    z-index: 2;
-}
-
-.profileimg {
-    position: absolute;
-    cursor: pointer;
-    width: auto;
-    height: 100px;
-    top: 15%;
-    right: 2%;
-    z-index: 2;
-}
-
-.menu { 
-    margin-top: 45px;
-    font-size: 25px; 
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 45px; 
-}
-
-.menu ul li {
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-}
-
-li a {
-    text-decoration: none;
-    color: var(--white);
-}
-
-a:visited {
-    color: var(--white);
-}
-
-/*------------------ Menu above ------------------*/
-
-
 
 
 
@@ -149,8 +80,7 @@ main {
 
 
 .movieImg img{
-    max-width: 100%;
-    height: 11vw;
+    max-width: 450px;
     transition: 0.3s ease;
 }
 
@@ -178,9 +108,9 @@ main {
 
 .items {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 50px;
+    
 }
 
 .textoverlaymovie {
@@ -201,58 +131,7 @@ h3 {
 
 
 
-/*--------------------Footer under--------------------*/
 
-footer {
-    background-color: var(--footer);
-}
-
-.item-block {
-    margin: 0 40%;
-    padding: 40px 0 20px 0;
-}
-
-.footer-info {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    font-size: 20px;
-    padding: 0;
-}
-
-.footer-icons {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    font-size: 30px;
-    padding: 0;
-}
-
-.line-block{
-    display: flex;
-    justify-content: center;
-}
-
-.line {
-    background-color: var(--white);
-    height: 2px;
-    width: 150px;
-}
-
-.footer-logo-block {
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
-    cursor: pointer;
-}
-.footer-logo {
-    height: 80px;
-    width: auto;
-}
-
-/*-----------------Footer above------------------*/
 
 
 
