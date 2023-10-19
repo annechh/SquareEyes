@@ -1,0 +1,29 @@
+
+/*----- Menu and Footer -----*/
+
+.logo, li, .profileimg, .footer-logo {
+    transition: 0.3s ease;
+}
+
+.logo:hover, li:hover, .profileimg:hover, .footer-logo:hover {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/*--- heart icon ---*/
+
+.fa-regular:hover {
+    transition: 0.3 ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/*----- Blue buttons -----*/
+
+.btn:hover {
+    transition: 0.3 ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}

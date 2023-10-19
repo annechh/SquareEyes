@@ -1,12 +1,12 @@
 @import url(/SquareEyes/footer.css);
 @import url(/SquareEyes/menu.css);
+@import url(/SquareEyes/hover.css);
 
 :root {
     --background: #0E0E0E;
     --shadow: #0e0e0ee4;
     --white: #d9d9d9;
-    --darkblue: #072531;
-    --lightblue: #229FCF;
+    --whitefaded: #d9d9d97c;
     --green: #06A917;
     --footer: #0A0A0A;
 }
@@ -17,12 +17,6 @@ body {
     color: var(--white);
 }
 
-.background-container img {
-    position:absolute;
-    max-width: 100%;
-    z-index: -1;
-    
-}
 
 
 /*=======================Main under=======================*/
@@ -31,6 +25,12 @@ main {
     padding-bottom: 60px;
 }
 
+.background-container img {
+    position:absolute;
+    max-width: 100%;
+    z-index: -1;
+    
+}
 
 
 
@@ -72,9 +72,16 @@ main {
     color: var(--white);
     font-size: 0.6vw;
     padding: 5px 0px 0px 5px;
+    position: absolute;
     transition: transform 0.3s ease;
     z-index: 2;
 } 
+
+/* -- SE PÅ DENNNE, skal få text til hover sammen me bilde -- */
+.textoverlay-container .textoverlaymovie {
+    width: 450px;
+    height: 200px;
+}
 
 h3 {
     margin: 0;
@@ -86,6 +93,13 @@ h3 {
     z-index: 2;
 }
 
+.movieImgtall .movie {
+    max-width: 450px;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+/*----- Hover under -----*/
 
 .movieImg .movie:hover{
     transition: 0.3s ease;
@@ -93,18 +107,11 @@ h3 {
     cursor: pointer;
 }
 
-.movieImgtall .movie {
-    max-width: 450px;
-    transition: transform 0.3s ease;
-    z-index: 2;
-}
-
-.movieImgtall .movie:hover{
+.movieImgtall .movie:hover, .textoverlaymovie:hover{
     transition: 0.3s ease;
     transform: scale(1.1);
     cursor: pointer;
 }
-
 
 /*----------------All movies above--------------*/
 

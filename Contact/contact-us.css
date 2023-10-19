@@ -1,15 +1,14 @@
 @import url(/SquareEyes/footer.css);
 @import url(/SquareEyes/menu.css);
+@import url(/SquareEyes/hover.css);
 
 :root {
     --background: #0E0E0E;
     --white: #d9d9d9;
-    --darkblue: #072531;
-    --lightblue: #229FCF;
+    --whitefaded: #d9d9d97c;
     --green: #06A917;
     --footer: #0A0A0A;
-    --button: #106d8e;
-    --textfield: #141414;
+    --textfield: #141414d4;
 }
 
 body {
@@ -35,6 +34,7 @@ main {
     align-items: center;
 }
 
+/*----------Background image and shadow under----------*/
 .image-container {
     display: flex;
     justify-content: center;
@@ -54,6 +54,8 @@ main {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+/*----------Background image and shadow above----------*/
+
 .item-container {
     position: absolute;
 }
@@ -64,10 +66,14 @@ main {
     align-items: center;
 }
 
+h4 {
+    font-size: 25px;
+    margin: 0 0 5px  0;
+}
+
 .minilogo {
     max-width: 150px;
 }
-
 
 .name, .email {
     width: 500px;
@@ -77,8 +83,10 @@ main {
     border-radius: 10px;
     border-color: var(--white);
     padding-left: 20px;
-    color: var(--white);
     font-size: 16px;
+    color: var(--white);
+    border: none;
+    outline: 2px solid var(--whitefaded);
 }
 
 .typetext {
@@ -86,11 +94,14 @@ main {
     height: 200px;
     background-color: var(--textfield);
     border-radius: 10px;
-    border-color: var(--white);
     margin-bottom: 20px;
     padding-left: 20px;
-    color: var(--white);
+    padding-top: 10px;
     font-size: 16px;
+    color: var(--white);
+    font-family: 'Cairo', sans-serif;
+    border: none;
+    outline: 2px solid var(--whitefaded);
 }
 
 .btn-container {
@@ -102,9 +113,18 @@ main {
     display: flex;
     justify-content: center;
     width: 200px;
-    background-color: var(--button);
+    background-image: linear-gradient(to bottom, #072531, #106B8D, #106B8D, #072531);
     color: var(--white);
     border-radius: 50px;
     border: none;
+    outline: 2px solid var(--whitefaded);
     font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+    cursor: pointer;
 }
