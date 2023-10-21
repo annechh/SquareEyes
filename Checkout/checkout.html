@@ -30,7 +30,8 @@
                     </ul>            
                 </nav>
             <span>
-            <img src="/SquareEyes/image/profileimg.png" alt="Profile image" class="profileimg">
+            <img src="/SquareEyes/image/profileimg.png" 
+            alt="Profile image" class="profileimg">
             </span> 
         </div>    
     </header>
@@ -54,40 +55,44 @@
                     </section>
                     <section class="payment-container">
                         <div class="pp">
-                            <div class="circle"></div>
-                            <img src="/SquareEyes/image/PayPal.png" alt="Image of PayPal">
+                            <button class="payment-method-circle btn-circle" 
+                            onclick="selectPaymentMethod('paypal')"></button>
+                            <img src="/SquareEyes/image/PayPal.png" 
+                            alt="Image of PayPal" class="pay-method-img">
                         </div>
                         <div class="visa">
-                            <div class="circle"></div>
-                            <img src="/SquareEyes/image/Visa.png" alt="Image of Visa">
+                            <button class="payment-method-circle btn-circle" 
+                            onclick="selectPaymentMethod('visa')"></button>
+                            <img src="/SquareEyes/image/Visa.png" 
+                            alt="Image of Visa" class="pay-method-img">
                         </div>
                         <div class="mc">
-                            <div class="circle"></div>
-                            <img src="/SquareEyes/image/Mastercard.png" alt="Image of Mastercard">
+                            <button class="payment-method-circle btn-circle" 
+                            onclick="selectPaymentMethod('mastercard')"></button>
+                            <img src="/SquareEyes/image/Mastercard.png" 
+                            alt="Image of Mastercard" class="pay-method-img">
                         </div>
                     </section>
                     <section class="info-container">
-                        <div class="namebox">
                             <form action="textfield">
-                                <input type="text" placeholder="Name">
+                                <input type="text" placeholder="Name" class="typefield">
                             </form>
-                        </div>
-                        <div class="cardbox">
                             <form action="textfield">
-                                <input type="text" placeholder="Email">
+                                <input type="text" placeholder="Card number" class="typefield">
                             </form>
-                        </div>
-                        <div class="expdatebox">
-                            <form action="textfield">
-                                <input type="text" placeholder="Exp date">
-                                <input type="text" placeholder="CVC">
+                        <div class="exp-cvc-box">
+                            <form action="textfield-small-1">
+                                <input type="text" placeholder="Exp date" class="typefield">
                             </form>
-                        </div>
+                            <form action="textfield-small-2">  
+                                <input type="text" placeholder="CVC" class="typefield">
+                            </form>
+                        </div>  
                     </section>
                     <section class="btn-container">
                         <div class="btnbox">
-                            <a href="/SquareEyes/Checkout/checkout.html"><button class="btn">
-                                Buy 99 Kr
+                            <a href="/SquareEyes/CheckoutSuccess/checkout-success.html"><button class="btn">
+                                Pay Now
                             </button></a>
                         </div>
                         <div class="cancelbox">
@@ -96,35 +101,36 @@
                     </section> 
                 </section>
             </section>
-            <section class="suggested-container">
-                <div class="suggestbox">
-                    <h3>Suggested for you</h3>
+            <section class="movie-container">
+                <div class="movie-itembox">
+                    <div class="text-container">
+                        <h3>You might also like</h3>
+                    </div>
+                    <section class="movies">    
+                        <div class="moviebox">
+                            <img src="/SquareEyes/image/small/FastandFurioussmall.png" 
+                            alt="Image of Fast and Furious" class="movie">
+                        </div>
+                        <div class="moviebox">
+                            <img src="/SquareEyes/image/small/LethalHuntresssmall.jpg.png" 
+                            alt="Image of Lethal Huntress" class="movie">
+                        </div>
+                        <div class="moviebox">
+                            <img src="/SquareEyes/image/small/Godzillasmall1.png" 
+                            alt="Image of Godzilla movie" class="movie">
+                        </div>
+                        <div class="moviebox">
+                            <img src="/SquareEyes/image/small/OnceUponaTimesmall1.png" 
+                            alt="Image of Once upon a Time movie" class="movie">
+                        </div>
+                        <div class="moviebox">
+                            <img src="/SquareEyes/image/small/Missonmadnesssmall.png" 
+                            alt="Image of Mission Madness movie" class="movie">
+                        </div>
+                    </section>
                 </div>
-                <section class="movie-container">
-                    <div class="moviebox">
-                        <img src="/SquareEyes/image/small/FastandFurioussmall.png" 
-                        alt="Image of Fast and Furious" class="movie">
-                    </div>
-                    <div class="moviebox">
-                        <img src="/SquareEyes/image/small/LethalHuntresssmall.jpg.png" 
-                        alt="Image of Lethal Huntress" class="movie">
-                    </div>
-                    <div class="moviebox">
-                        <img src="/SquareEyes/image/small/Godzillasmall1.png" 
-                        alt="Image of Godzilla movie" class="movie">
-                    </div>
-                    <div class="moviebox">
-                        <img src="/SquareEyes/image/small/OnceUponaTimesmall1.png" 
-                        alt="Image of Once upon a Time movie" class="movie">
-                    </div>
-                    <div class="moviebox">
-                        <img src="/SquareEyes/image/small/Missonmadnesssmall.png" 
-                        alt="Image of Mission Madness movie" class="movie">
-                </section>
             </section>
         </section>
-            
-
     </main>
     <footer>
         <div class="item-block">

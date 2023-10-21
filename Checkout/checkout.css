@@ -5,6 +5,7 @@
 :root {
     --background: #0E0E0E;
     --white: #d9d9d9;
+    --whitefaded: #d9d9d97c;
     --darkblue: #072531;
     --lightblue: #229FCF;
     --green: #06A917;
@@ -17,6 +18,13 @@ body {
     color: var(--white);
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--white);
+}
 
 
 
@@ -27,7 +35,6 @@ main {
     padding-top: 60px;
 }
 
-/*----- Order box img -----*/
 .h1box {
     display: flex;
     justify-content: center;
@@ -39,16 +46,32 @@ h1 {
     font-size: 70px;
 }
 
+
+
+
+/* ====== Order container ======*/
+
+
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     max-height: 600px;
 }
 
-.img-container img{
+.order-container {
+    box-sizing: border-box;
     width: 600px;
-    height: 600px;
+    align-content: space-between;
+    display: grid;
+    justify-content: center;
+}
+
+/* Image */
+
+.img-container img{
+    max-width: 600px;
+    max-height: 600px;
 }
 
 .img-container {
@@ -56,24 +79,159 @@ h1 {
     justify-content: right;
 }
 
-.order-container {
+/* Title and price */
+
+.titlebox {
     display: grid;
-    justify-content: left;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid var(--white);
+    max-height: 50px;
 }
 
+.price {
+    display: grid;
+    justify-content: right;
+}
 
-/*----- Movies under -----*/
+h2 {
+    margin: 0;
+    font-size: 40px;
+}
 
-.movie {
+/* Payment method, paypal, visa, mastercard */
+
+.pay-method-img {
+    max-width: 70px;
+}
+
+.payment-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center; 
+    gap: 10px;
+}
+
+.pp {
+    justify-self: end;
+}
+
+.visa {
+    justify-self: center;
+}
+
+.mc {
+    justify-self: left;
+}
+
+.pp, .visa, .mc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-circle {
+    display: inline-grid;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-left: auto;  
+}
+
+.circle {
+    border: 2px solid var(--white);
+    border-radius: 50px;
+    max-width: 20px;
+    max-height: 20px;  
+}
+
+/* Card information */
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.exp-cvc-box {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.typefield {
+    width: 100%; 
+    padding: 10px;
+    height: 50px;
+    box-sizing: border-box;
+    color: var(--white);
+    border: none;
+    background-color: var(--textfield);
+    outline: 2px solid var(--whitefaded);
+    border-radius: 10px;
+} 
+
+/*----- Button -----*/
+
+.btn-container {
+    display: grid;
+    gap: 20px;
+}
+
+.btnbox, .cancelbox {
+    display: grid;
+    justify-content: center;
+    /* margin-top: 10px; */
+}
+
+.btn {
     width: 300px;
+    height: 60px;
+    background-image: 
+    linear-gradient(to bottom, #072531, #106B8D, #106B8D, #072531);
+    color: var(--white);
+    border-radius: 50px;
+    border: none;
+    outline: 2px solid var(--whitefaded);
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.suggested-container {
+.btn:hover {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+    cursor: pointer;
 }
+
+
+/*----- Suggested movies under -----*/
 
 .movie-container {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr)
-    
-    
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
 }
+
+
+.movie-itembox {
+    display: flex;
+    flex-direction: column;
+    max-width: 1900px;
+    padding: 0;
+}
+
+.text-container {
+    display: flex;
+}
+
+.movies { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie {
+    width: 350px;
+}
+
