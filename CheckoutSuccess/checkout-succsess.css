@@ -28,29 +28,13 @@ main {
 
 
 
-.info-container {
-    position: absolute;
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
-
-
-
-/*---Button---*/
-
-.btn {
-    width: 300px;
-    height: 60px;
-    background-image: 
-    linear-gradient(to bottom, #072531, #106B8D, #106B8D, #072531);
-    color: var(--white);
-    border-radius: 50px;
-    border: none;
-    outline: 2px solid var(--whitefaded);
-    font-size: 30px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-
 
 /*----- Big image under -----*/
 
@@ -73,10 +57,62 @@ main {
 
 .shadow-overlay {
     position: absolute;
-    background-image: 
-    linear-gradient(to right, #00000033, #00000027, #00000023);
+    background-color: #00000039;
     z-index: 0;
 }
+
+
+/*----- Big image above -----*/
+
+/*----- Info over image under -----*/
+
+.info-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.checksign {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.btnbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/*---Button---*/
+
+.btn {
+    width: 300px;
+    height: 60px;
+    background-image: 
+    linear-gradient(to bottom, #072531, #106B8D, #106B8D, #072531);
+    color: var(--white);
+    border-radius: 50px;
+    border: none;
+    outline: 2px solid var(--whitefaded);
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
 
 
 
