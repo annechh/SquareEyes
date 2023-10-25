@@ -27,13 +27,7 @@ main {
     padding-bottom: 60px;
 }
 
-
-
 /*------------ Background image ------------*/
-
-/* .background-container {
-    display: block;
-} */
 
 .img-container {
     width: 100%;
@@ -62,23 +56,19 @@ main {
 
 .info-container {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 750px;
-    left: 5%;
+    margin-top: 25%;
+    margin-left: 5%;
+    height: auto;
 }
 
-.textbox {
+
+.text-headline {
     z-index: 2;
     font-family: 'Bruno Ace SC', sans-serif;
     font-size: 1.5vw;
     text-shadow: 10px 10px 8px rgba(0, 0, 0, 0.999);
 }
 
-.img-container img, .shadow-overlay, .info-container {
-    max-width: 100%;
-    height: 100%;
-}
 
 .shadow-overlay {
     position: absolute;
