@@ -61,7 +61,7 @@ main {
     transform: translate(-50%, -50%);
     z-index: 2;
     font-family: 'Bruno Ace SC', sans-serif;
-    font-size: 4vw;
+    font-size: 2vw;
     text-shadow: 10px 10px 8px rgba(0, 0, 0, 0.999);
 }
 

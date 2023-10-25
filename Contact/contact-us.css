@@ -8,7 +8,7 @@
     --whitefaded: #d9d9d97c;
     --green: #06A917;
     --footer: #0A0A0A;
-    --textfield: #141414d4;
+    --blackfaded: #141414d4;
 }
 
 body {
@@ -79,7 +79,7 @@ h4 {
     width: 500px;
     height: 40px;
     margin-bottom: 20px;
-    background-color: var(--textfield);
+    background-color: var(--blackfaded);
     border-radius: 10px;
     border-color: var(--white);
     padding-left: 20px;
@@ -92,7 +92,7 @@ h4 {
 .typetext {
     width: 500px;
     height: 200px;
-    background-color: var(--textfield);
+    background-color: var(--blackfaded);
     border-radius: 10px;
     margin-bottom: 20px;
     padding-left: 20px;

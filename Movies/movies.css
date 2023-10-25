@@ -29,7 +29,7 @@ main {
     position:absolute;
     max-width: 100%;
     z-index: -1;
-    
+    box-shadow: 0 0 25px 5px rgba(93, 13, 13, 0.349);
 }
 
 
@@ -87,30 +87,37 @@ h3 {
     margin: 0;
 }
 
+/* Movie image */
+
 .movieImg .movie{
     max-width: 450px;
     transition: transform 0.3s ease;
     z-index: 2;
+    box-shadow: 0 0 25px 1px rgba(95, 94, 94, 0.349);
 }
 
 .movieImgtall .movie {
     max-width: 450px;
     transition: transform 0.3s ease;
     z-index: 2;
+    box-shadow: 0 0 25px 1px rgba(95, 94, 94, 0.349);
 }
 
-/*----- Hover under -----*/
+/*----- Movie image Hover under -----*/
 
 .movieImg .movie:hover{
     transition: 0.3s ease;
     transform: scale(1.1);
     cursor: pointer;
+    box-shadow: 0 0 25px 1px rgba(183, 180, 180, 0.349);
+
 }
 
 .movieImgtall .movie:hover, .textoverlaymovie:hover{
     transition: 0.3s ease;
     transform: scale(1.1);
     cursor: pointer;
+    box-shadow: 0 0 25px 1px rgba(183, 180, 180, 0.349);
 }
 
 /*----------------All movies above--------------*/
@@ -128,4 +135,4 @@ h3 {
         transition: transform 0.3s ease;
         z-index: 2;
     }
-} */
+}  */
