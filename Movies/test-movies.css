@@ -58,12 +58,9 @@ main {
 .info-container {
     position: absolute;
     margin-top: 20%;
-    margin-left: 5%;
+    margin-left: 6%;
     height: auto;
-}
-
-h2 {
-    font-size: 1vw;
+    display: grid;
 }
 
 .text-headline {
@@ -76,6 +73,11 @@ h2 {
 
 .main-movie-name {
     margin-bottom: 0;
+}
+
+h2 {
+    font-size: 1vw;
+    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.999);
 }
 
 /* Button */
@@ -92,6 +94,7 @@ h2 {
     font-size: 1.5vw;
     cursor: pointer;
     transition: 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .btn:hover {
@@ -100,11 +103,23 @@ h2 {
     cursor: pointer;
 }
 
-
 /* Genre */
 
+.genre-btn {
+    font-size: 1vw;
+    font-weight: bold;
+    border: 0;
+    background-color: #ffffff00;
+    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.999);
+    color: var(--white);
+    transition: 0.3s ease;
+}
 
-
+.genre-btn:hover {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 /* ---------------- All movies under ---------------*/
 
@@ -138,9 +153,7 @@ h2 {
     justify-content: center;
 }
 
-.title-container {
-    
-}
+
 
 .textoverlaymovie {
     display: flex;
