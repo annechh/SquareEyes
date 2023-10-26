@@ -51,7 +51,7 @@ main {
     box-shadow: 0 0 20px 10px rgba(207, 149, 83, 0.7); 
     margin: 1em auto 0;
     width: 100%;
-    z-index: 1;    
+    /* z-index: 1;     */
 }
 
 .maintext {
