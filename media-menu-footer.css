@@ -1,0 +1,31 @@
+
+@media screen and (max-width: 1400px ) {
+    .navmodul {
+        height: 100px;
+    }
+    .logo, .profileimg {
+        height: 75px;
+    }
+    .menu ul {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 850px ) {
+    .navmodul {
+        height: 75px;
+    }
+    .logo, .profileimg {
+        height: 50px;
+    }
+    .menu ul {
+        gap: 30px
+    }
+}
+
+@media screen and (max-width: 540px ) {
+    .menu ul {
+        margin-top: 70px;
+    }
+}
+

@@ -34,8 +34,9 @@
 }
 
 .menu { 
-    margin-top: 45px;
     font-size: 25px; 
+    display: flex;
+    align-items: center;
 }
 
 .menu ul {

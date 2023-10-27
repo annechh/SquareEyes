@@ -1,0 +1,32 @@
+@media screen and (max-width: 1960px ) {
+    .movie5{
+        display: none;
+    }   
+    .btn {
+        margin-bottom: 10px;
+    }
+    h2 {
+        margin-bottom: 5px;
+    }  
+}
+
+@media screen and (max-width: 1400px ) {
+    .movie4 {
+        display: none;
+    }
+    .btn {
+        margin-bottom: 5px;
+    }
+    h2 {
+        margin-bottom: 0px;
+    }  
+}
+
+@media screen and (max-width: 1000px ) {
+    .movie3 {
+        display: none;
+    }
+    .btn {
+        margin-bottom: 0px;
+    } 
+}

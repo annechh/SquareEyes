@@ -2,6 +2,9 @@
 @import url(/SquareEyes/menu.css);
 @import url(/SquareEyes/hover.css);
 
+@import url(/SquareEyes/media-menu-footer.css);
+@import url(/SquareEyes/Movies/movies-media.css);
+
 :root {
     --background: #0E0E0E;
     --white: #d9d9d9;
@@ -34,13 +37,13 @@ main {
     height: 100%;
     display: flex;
     justify-content: center;
+    position: absolute;
 }
 
 .img-container img {
-    /* position:absolute; */
     max-width: 100%;
     z-index: -1;
-    box-shadow: 0 0 25px 5px rgba(93, 13, 13, 0.349);
+    box-shadow: 0 20px 80px rgb(69 11 7);
 }
 
 /*-------- Items on background image ---------*/
@@ -55,10 +58,14 @@ main {
     font-size: 1vw;
 }
 
+.big-img-container {
+    display: grid;
+}
+
 .info-container {
     position: absolute;
-    margin-top: 20%;
-    margin-left: 6%;
+    margin-top: 18%;
+    margin-left: 5%;
     height: auto;
     display: grid;
 }
@@ -71,16 +78,22 @@ main {
     text-shadow: 10px 10px 8px rgba(0, 0, 0, 0.999);
 }
 
-.main-movie-name {
+.main-movie-title {
     margin-bottom: 0;
 }
 
 h2 {
     font-size: 1vw;
     text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.999);
+    margin-bottom: 10px;
 }
 
 /* Button */
+
+.btn-container {
+    width: 12vw;
+    height: 3vw;
+}
 
 .btn {
     width: 12vw;
@@ -94,7 +107,7 @@ h2 {
     font-size: 1.5vw;
     cursor: pointer;
     transition: 0.3s ease;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .btn:hover {
@@ -123,39 +136,41 @@ h2 {
 
 /* ---------------- All movies under ---------------*/
 
-.sectionmovies1 { 
-    z-index: 2;    
+
+.top-movie-container-margin {
+    margin-top: 39%;
+}
+
+.sectionmovies {
+    max-width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.title-container, .title-headline{
+    z-index: 2;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
 .items {
     display: flex;
     justify-content: center;
-    gap: 50px;
     z-index: 2;
+    gap: 1vw;
 }
 
-/* .items {
-    display: grid;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    z-index: 2;
-    grid-template-columns:  ;
-} */
-
-
-.big-img-container {
-    display: grid;
+.moviecontainer {
+    margin-bottom: 30px;
 }
 
-.container {   
-    display: grid;
-    justify-content: center;
-}
+/* Movie title */
 
-
-
-.textoverlaymovie {
+.movie-title {
     display: flex;
     justify-content: center;
     white-space: nowrap;
@@ -165,8 +180,6 @@ h3 {
     margin: 0;
     font-size: 0.6vw;
 }
-
-
 
 /* Movie image */
 
@@ -186,11 +199,11 @@ h3 {
     box-shadow: 0 0 25px 1px rgba(95, 94, 94, 0.349);
 }
 
-/*----- Movie image Hover under -----*/
+/* Movie image Hover */
 
 .movieImg .movie:hover{
     transition: 0.3s ease;
-    transform: scale(1.1);
+    transform: scale(1.04);
     cursor: pointer;
     box-shadow: 0 0 25px 1px rgba(183, 180, 180, 0.349);
 
@@ -198,43 +211,9 @@ h3 {
 
 .movieImgtall .movie:hover, .textoverlaymovie:hover{
     transition: 0.3s ease;
-    transform: scale(1.1);
+    transform: scale(1.04);
     cursor: pointer;
     box-shadow: 0 0 25px 1px rgba(183, 180, 180, 0.349);
 }
 
-/* Scaled image */
 
-/* .movie {
-    transition: transform 0.3s;
-} */
-
-/* @media screen and (max-width: 1946px ) {
-    .movie {
-        transform: scale(1.2);
-    }
-    .items {
-        gap: 100px
-    }
-} */
-
-/*----------------All movies above--------------*/
-
-/*=======================Main above=========================*/
-
-
-
-
-
-
-
-
-
-/* @media screen and (max-width: 2560px) {
-
-} 
-
-
-@media screen and (max-width: 768px){
-    
-} */
