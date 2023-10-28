@@ -2,14 +2,17 @@
 @import url(/SquareEyes/menu.css);
 @import url(/SquareEyes/hover.css);
 
+@import url(/SquareEyes/media-menu.css);
+@import url(/SquareEyes/Movies/movies-media.css);
+
 :root {
     --background: #0E0E0E;
-    --shadow: #0e0e0ee4;
     --white: #d9d9d9;
     --whitefaded: #d9d9d97c;
     --green: #06A917;
     --footer: #0A0A0A;
     --blackfaded: #141414d4;
+
 }
 
 body {
@@ -24,10 +27,22 @@ body {
 /*=======================Main under=======================*/
 
 main {
-    padding-bottom: 60px;
+    padding-bottom: 60px;    
+}
+
+/* Removes all text margin */
+h1, h2, h3, h4, p {
+    margin: 0;
 }
 
 /*------------ Background image ------------*/
+.big-img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
 
 .img-container {
     width: 100%;
@@ -37,50 +52,79 @@ main {
 }
 
 .img-container img {
-    /* position:absolute; */
-    max-width: 100%;
     z-index: -1;
-    box-shadow: 0 0 25px 5px rgba(93, 13, 13, 0.349);
+    box-shadow: 0 20px 80px rgb(69 11 7);
 }
 
-/*-------- Items on background image ---------*/
-
-.pagename {
-    margin-left: 5%;
-    margin-top: 5%;
-    position: absolute;
-    padding: 0;
-    z-index: 2;
-    font-weight: bold;
+.img-container img, .shadow-overlay, .info-container {
+    width: 100%;
+    height: 100%;
 }
-
-.info-container {
-    position: absolute;
-    margin-top: 25%;
-    margin-left: 5%;
-    height: auto;
+.big-movie-link {
+    width: 100%;
+    max-height: 100%;
 }
-
-
-.text-headline {
-    z-index: 2;
-    font-family: 'Bruno Ace SC', sans-serif;
-    font-size: 1.5vw;
-    text-shadow: 10px 10px 8px rgba(0, 0, 0, 0.999);
-}
-
 
 .shadow-overlay {
     position: absolute;
     background-image: 
-    linear-gradient(to right, #00000076, #00000089, #00000089);
-    z-index: 1;
+    linear-gradient(to right, #0000005e, #00000027, #00000023);
+    z-index: 0;
 }
+
+/*-------- Items on background image ---------*/
+
+.info-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    /* margin-left: 5%; */
+}
+
+.page-name-box {
+    margin-top: 2%;
+    margin-left: 5%;
+    max-width: 100%;
+    height: 10%;
+}
+
+.pagename {
+    position: absolute;
+    padding: 0;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.infobox {
+    max-width: 90%;
+    justify-content: end;
+    padding-bottom: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.text-headline {
+    z-index: 2;
+    font-family: 'Bruno Ace SC', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 10px 10px 6px rgba(0, 0, 0, 0.999);
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.999);
+}
+
+
 
 /* Button */
 
 .btn {
-    width: 250px;
+    width: 300px;
     height: 60px;
     background-image: 
     linear-gradient(to bottom, #072531, #106B8D, #106B8D, #072531);
@@ -88,92 +132,108 @@ main {
     border-radius: 50px;
     border: none;
     outline: 2px solid var(--whitefaded);
-    font-size: 25px;
+    font-size: 30px;
     cursor: pointer;
     transition: 0.3s ease;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .btn:hover {
     transition: 0.3s ease;
     transform: scale(1.1);
-    cursor: pointer;
-}
+    cursor: pointer;  
+} 
 
 /* Genre */
 
+.genre-btn {
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    background-color: #d2222200;
+    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.999);
+    color: var(--white);
+    transition: 0.3s ease;
+}
 
+.genre-btn:hover {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 /* ---------------- All movies under ---------------*/
 
-.sectionmovies1 {
-    z-index: 2;    
+
+.top-movie-container-margin {
+    margin-top: -60px;
+}
+
+
+.sectionmovies {
+    max-width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.title-container, .title-headline{
+    z-index: 2;
+    margin: 0;
 }
 
 .container {
-    margin: 0 5%;
-    padding-top: 2%;
-    z-index: 2;
-}
-
-.title-container {
-    padding-bottom: 5px;
-    z-index: 2;
-    position: absolute;
-}
-
-.title-headline {
-    margin: 0;
-    z-index: 2;
+    display: flex;
+    flex-direction: column;
 }
 
 .items {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
     z-index: 2;
+    gap: 1vw;
 }
 
-.textoverlaymovie {
-    color: var(--white);
-    font-size: 0.6vw;
-    padding: 5px 0px 0px 5px;
-    position: absolute;
-    transition: transform 0.3s ease;
-    z-index: 2;
-} 
-
-/* -- SE PÅ DENNNE, skal få text til hover sammen me bilde -- */
-.textoverlay-container .textoverlaymovie {
-    width: 450px;
-    height: 200px;
+.moviecontainer {
+    margin-bottom: 30px;
 }
 
-h3 {
+/* Movie title */
+
+.movie-title {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+h4 {
     margin: 0;
+    font-size: 16px;
 }
 
 /* Movie image */
 
 .movieImg .movie{
-    max-width: 450px;
+    max-width: 100%;
+    height: auto;
     transition: transform 0.3s ease;
     z-index: 2;
     box-shadow: 0 0 25px 1px rgba(95, 94, 94, 0.349);
 }
 
 .movieImgtall .movie {
-    max-width: 450px;
+    max-width: 100%;
+    height: auto;
     transition: transform 0.3s ease;
     z-index: 2;
     box-shadow: 0 0 25px 1px rgba(95, 94, 94, 0.349);
 }
 
-/*----- Movie image Hover under -----*/
+/* Movie image Hover */
 
 .movieImg .movie:hover{
     transition: 0.3s ease;
-    transform: scale(1.1);
+    transform: scale(1.04);
     cursor: pointer;
     box-shadow: 0 0 25px 1px rgba(183, 180, 180, 0.349);
 
@@ -181,24 +241,69 @@ h3 {
 
 .movieImgtall .movie:hover, .textoverlaymovie:hover{
     transition: 0.3s ease;
-    transform: scale(1.1);
+    transform: scale(1.04);
     cursor: pointer;
     box-shadow: 0 0 25px 1px rgba(183, 180, 180, 0.349);
 }
 
-/*----------------All movies above--------------*/
+/* ---------- @Media queries ---------- */
 
-
-
-/* @media screen and(max-width: 2160px) {
-    .movieImgtall img {
-        max-width: 200px;
-        transition: transform 0.3s ease;
-        z-index: 2;
+@media screen and (max-width: 1400px ) {
+    /* Items on background image */
+    .text-headline {
+        font-size: 35px;
     }
-    .movieImg img{
-        max-width: 200px;
-        transition: transform 0.3s ease;
-        z-index: 2;
+    h3 {
+        font-size: 16px;
+    } 
+
+    /* Button */
+    .btn {
+        width: 220px;
+        height: 50px;
+        font-size: 20px;
     }
-}  */
+
+    /* Movies */
+}
+
+
+@media screen and (max-width: 850px ) {
+    /* Items on background image */
+    .pagename {
+        font-size: 10px;
+        font-weight: 100;
+    }
+    .text-headline {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 10px;
+        font-weight: 100;
+    } 
+    .infobox {
+        padding-bottom: 2%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    /* Button */
+    .btn {
+        width: 100px;
+        height: 25px;
+        font-size: 12px;
+        outline: 1px solid var(--whitefaded);
+    }
+    .top-movie-container-margin {
+        margin-top: 0;
+    }
+
+    .genre-btn {
+        font-size: 12px;
+        font-weight: 100;
+    }
+    
+    /* Movies */
+
+}
