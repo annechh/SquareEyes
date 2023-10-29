@@ -3,6 +3,7 @@
 @import url(/SquareEyes/hover.css);
 
 @import url(/SquareEyes/media-menu.css);
+@import url(/SquareEyes/media-footer.css);
 @import url(/SquareEyes/Movies/movies-media.css);
 
 :root {
@@ -31,7 +32,7 @@ main {
 }
 
 /* Removes all text margin */
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, h5, p {
     margin: 0;
 }
 
@@ -168,30 +169,40 @@ h3 {
 
 .top-movie-container-margin {
     margin-top: -60px;
-}
-
-
-.sectionmovies {
-    max-width: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.title-container, .title-headline{
-    z-index: 2;
-    margin: 0;
+    /* margin-top: 50px; */
 }
 
 .container {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sectionmovies {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    position: relative;
 }
 
 .items {
     display: flex;
-    justify-content: center;
-    z-index: 2;
     gap: 1vw;
+}
+
+.title-container {
+    position: relative;
+}
+
+.movieImg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .moviecontainer {
@@ -206,24 +217,29 @@ h3 {
     white-space: nowrap;
 }
 
-h4 {
+h5 {
     margin: 0;
     font-size: 16px;
+}
+
+.small-movie-link {
+    width: 100%;
+    max-height: 100%;
 }
 
 /* Movie image */
 
 .movieImg .movie{
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     transition: transform 0.3s ease;
     z-index: 2;
     box-shadow: 0 0 25px 1px rgba(95, 94, 94, 0.349);
 }
 
 .movieImgtall .movie {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     transition: transform 0.3s ease;
     z-index: 2;
     box-shadow: 0 0 25px 1px rgba(95, 94, 94, 0.349);
@@ -249,6 +265,11 @@ h4 {
 /* ---------- @Media queries ---------- */
 
 @media screen and (max-width: 1400px ) {
+    
+    .img-container img {
+        box-shadow: 0 15px 60px rgb(69 11 7);
+    }
+
     /* Items on background image */
     .text-headline {
         font-size: 35px;
@@ -265,10 +286,28 @@ h4 {
     }
 
     /* Movies */
+
+    .container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .moviecontainer {
+        margin-bottom: 15px;
+    }
+    .movie5{
+        display: none;
+    }  
 }
 
 
 @media screen and (max-width: 850px ) {
+    main{
+        padding-bottom: 15px;
+    }
+
+    .img-container img {
+        box-shadow: 0 10px 40px rgb(69 11 7);
+    }
     /* Items on background image */
     .pagename {
         font-size: 10px;
@@ -276,6 +315,7 @@ h4 {
     }
     .text-headline {
         font-size: 18px;
+        text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.999);
     }
     h3 {
         font-size: 10px;
@@ -289,6 +329,7 @@ h4 {
     }
 
     /* Button */
+
     .btn {
         width: 100px;
         height: 25px;
@@ -296,9 +337,8 @@ h4 {
         outline: 1px solid var(--whitefaded);
     }
     .top-movie-container-margin {
-        margin-top: 0;
+        margin-top: 10px;
     }
-
     .genre-btn {
         font-size: 12px;
         font-weight: 100;
@@ -306,4 +346,16 @@ h4 {
     
     /* Movies */
 
+    h4 {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    h5 {
+        font-size: 12px;
+    }
+    .items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
 }
