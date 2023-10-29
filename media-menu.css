@@ -12,20 +12,27 @@
 }
 
 @media screen and (max-width: 850px ) {
-    .navmodul {
-        height: 75px;
-    }
-    .logo, .profileimg {
-        height: 50px;
-    }
     .menu ul {
         gap: 30px
     }
 }
 
 @media screen and (max-width: 540px ) {
+    .navmodul {
+        height: 75px;
+    }
+    .sectionnav {
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
     .menu ul {
-        margin-top: 70px;
+        gap: 20px
+    }
+    .logo {
+        display: none;
+    } 
+    .profileimg {
+        height: 50px;
     }
 }
 
