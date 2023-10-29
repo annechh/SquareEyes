@@ -1,25 +1,10 @@
-@media screen and (max-width: 1960px ) {
-    .movie5{
-        display: none;
-    }   
-    /* .main-movie-title {
-        font-size: 65px;
-        text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.999);
-    }   */
-} 
 
-/* Some wont work here, placed inside movies.css - i would love an explaination */
+
 
 @media screen and (max-width: 1400px ) {
 
 }
 
 @media screen and (max-width: 850px ) {
-    /* .movie4 {
-        display: none;
-    }
-    
-    h4 {
-        font-size: 10px;
-    }  */
+
 }

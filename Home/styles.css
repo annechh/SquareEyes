@@ -2,6 +2,10 @@
 @import url(/SquareEyes/menu.css);
 @import url(/SquareEyes/hover.css);
 
+@import url(/SquareEyes/media-menu.css);
+@import url(/SquareEyes/media-footer.css);
+
+
 :root {
     --background: #0E0E0E;
     --white: #d9d9d9;
