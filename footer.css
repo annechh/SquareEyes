@@ -35,7 +35,7 @@ footer {
 .footer-line {
     background-color: var(--white);
     height: 2px;
-    width: 150px;
+    min-width: 150px;
 }
 
 .footer-logo-block {
