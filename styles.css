@@ -20,6 +20,14 @@ body {
     font-family: 'Cairo', sans-serif;
 }
 
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--white);
+}
 
 
 /*=======================Main under=======================*/
@@ -59,7 +67,11 @@ main {
     height: 100%;
     z-index: -1;
     box-shadow: 0 0 25px 5px rgba(207, 149, 83, 0.7);
-} 
+}
+
+.big-movie-link {
+    z-index: 1;
+}
 
 .info-container {
     width: 90vw;
@@ -76,6 +88,7 @@ h2 {
     text-shadow: 10px 10px 8px rgba(0, 0, 0, 0.999);
     padding-left: 3%;
     padding-bottom: 6%;
+    z-index: 2;
 }
 
 
@@ -231,6 +244,7 @@ h5 {
     .title-container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
     .title-headline {
         display: flex;
