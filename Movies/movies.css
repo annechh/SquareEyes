@@ -262,7 +262,7 @@ h5 {
     box-shadow: 0 0 25px 1px rgba(183, 180, 180, 0.349);
 }
 
-/* ---------- @Media queries ---------- */
+/* ---------- @Media queries 1400px ---------- */
 
 @media screen and (max-width: 1400px ) {
     
@@ -299,6 +299,7 @@ h5 {
     }  
 }
 
+/* ---------- @Media queries 850px ---------- */
 
 @media screen and (max-width: 850px ) {
     main{
