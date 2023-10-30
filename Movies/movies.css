@@ -25,6 +25,7 @@ body {
 
 
 
+
 /*=======================Main under=======================*/
 
 main {
@@ -35,6 +36,7 @@ main {
 h1, h2, h3, h4, h5, p {
     margin: 0;
 }
+
 
 /*------------ Background image ------------*/
 .big-img-container {
