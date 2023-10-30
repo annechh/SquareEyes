@@ -33,7 +33,11 @@ a:visited {
 
 main {
     padding-bottom: 60px;
-    padding-top: 60px;
+}
+
+/* Removes all text margin */
+h1, h2, h3, h4, h5, p {
+    margin: 0;
 }
 
 .h1box {
@@ -97,7 +101,6 @@ h1 {
 }
 
 h2 {
-    margin: 0;
     font-size: 40px;
 }
 

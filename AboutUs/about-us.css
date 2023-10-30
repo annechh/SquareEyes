@@ -21,13 +21,16 @@ body {
     font-family: 'Cairo', sans-serif;
 }
 
-
-
 /*=======================Main under=======================*/
 
 main {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+/* Removes all text margin */
+h1, h2, h3, h4, h5, p {
+    margin: 0;
 }
 
 .line-container {
