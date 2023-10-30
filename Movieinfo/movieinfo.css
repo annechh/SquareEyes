@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, p {
     z-index: 0;
 }
 
-/*----- Text over image under -----*/
+/*----- Text on image  -----*/
 
 .info-container {
     position: absolute;
@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, p {
 .textbox {
     width: 40%;
     height: 100%;
-    padding-left: 100px;
+    padding-left: 70px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -95,19 +95,17 @@ h1, h2, h3, h4, h5, p {
 h2 {
     font-size: 90px;
     text-shadow: 10px 10px 8px rgba(0, 0, 0, 0.877);
-    margin: 0;
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
 h3 {
-    font-size: 20px;
-    margin: 0;
-    padding-top: 30px;
-    white-space: nowrap;
+    font-size: 18px;
+    padding-top: 20px;
 }
 
 .textinfo {
-    padding-bottom: 100px;
+    padding-bottom: 70px;
+    width: 90%;
 }
 
 /*----- Heart Icon and Button under -----*/
@@ -116,9 +114,9 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 100px;
-    padding-right: 100px;
-    padding-top: 100px;
+    padding-bottom: 70px;
+    padding-right: 70px;
+    padding-top: 70px;
 }
 
 .btn {
@@ -136,7 +134,7 @@ h3 {
 }
 
 .fa-regular {
-    font-size: 50px;
+    font-size: 40px;
     transition: 0.3 ease;
     color: var(--footer);   
 }
@@ -227,29 +225,140 @@ h5 {
 }
 
 
-/*----- @Media under -----*/
+/* ---------- @Media queries 1400px ---------- */
 
 @media screen and (max-width: 1400px ){
+
+    /* Big movie image */
+
+    .img-container img, .shadow-overlay, .info-container {
+        width: 90%;
+        height: 100%;
+    }
+    h2 {
+        font-size: 60px;
+        padding-top: 0px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    .textbox {
+        padding-left: 35px;
+    } 
+    .textinfo {
+        padding-bottom: 35px;
+    }
+    .itembox {
+        padding-bottom: 35px;
+        padding-right: 35px;
+        padding-top: 35px;
+    }
+
 
     /* Movies */
 
     .container {
-        margin-left: 15px;
-        margin-right: 15px;
+        width: 90%;
     }
     .moviecontainer {
         margin-bottom: 15px;
     }
     .movie5{
         display: none;
-    }  
+    } 
+    
+    /* Button */
+
+    .btn {
+        width: 220px;
+        height: 50px;
+        font-size: 20px;
+    }
 }
 
+/* ---------- @Media queries 850px ---------- */
 
 @media screen and (max-width: 850px ){
 
+    main {
+        padding-bottom: 30px;
+    }
+    .pagename {
+        font-size: 10px;
+        font-weight: 100;
+    }
+
+    /* Big movie image */
+
+    .big-img-container {
+        display: block;
+        width: 100%;
+    }
+    .img-container img {
+        width: 100%;
+        box-shadow: 0 0 15px 1px rgba(255, 255, 255, 0.349);
+    }
+    .img-container img {
+        width: 100%;
+        height: 100%;
+    }
+    .shadow-overlay {
+        display: none;
+    }
+
+    /* Info on big image pushed down */
+
+    .info-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        width: 100%;
+    }
+    .textbox {
+        width: 90%;
+        padding:0;
+        padding-left: 15px;
+    }
+    .textinfo {
+        width: 90%;
+    }
+
+    .itembox {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px ;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h3 {
+        font-size: 12px;
+    }
+    .fa-regular {
+        color: var(--white);
+        font-size: 20px;
+    }
+    .btn {
+        width: 100px;
+        height: 25px;
+        font-size: 12px;
+        outline: 1px solid var(--whitefaded);
+    }
+    
     /* Movies */
 
+    .top-movie-container-margin {
+        margin-top: 30px;
+    }
+    .container {
+        width: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
     h4 {
         font-size: 14px;
         margin-bottom: 0;
