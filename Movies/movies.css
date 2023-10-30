@@ -80,7 +80,6 @@ h1, h2, h3, h4, h5, p {
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
-    /* margin-left: 5%; */
 }
 
 .page-name-box {
@@ -252,7 +251,6 @@ h5 {
     transform: scale(1.04);
     cursor: pointer;
     box-shadow: 0 0 25px 1px rgba(183, 180, 180, 0.349);
-
 }
 
 .movieImgtall .movie:hover, .textoverlaymovie:hover{
