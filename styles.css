@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, p {
     width: 90vw;
     height: 100%;
     z-index: -1;
-    box-shadow: 0 0 25px 5px rgba(207, 149, 83, 0.7);
+    box-shadow: 0 0 25px 5px rgb(69 11 7);
 }
 
 .big-movie-link {
@@ -178,7 +178,7 @@ h5 {
 @media screen and (max-width: 1400px ) {
     
     .img-container img {
-        box-shadow:0 0 18px 4px rgb(207, 149, 83, 0.7);
+        box-shadow:0 0 18px 4px rgb(69 11 7);
     }
 
     /* Items on background image */
@@ -217,7 +217,7 @@ h5 {
     }
 
     .img-container img {
-        box-shadow:0 0 14px 2px rgb(207, 149, 83, 0.7);
+        box-shadow:0 0 14px 2px rgb(69 11 7);
         width: 100vw;
     }
 
