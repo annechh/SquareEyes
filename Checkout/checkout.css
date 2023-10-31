@@ -134,8 +134,7 @@ label {
 
 .checkbox-field:checked + .checkbox-label {
     background-image: url("/SquareEyes/image/circle.png"); 
-    background-size: cover; 
-    
+    background-size: cover;
 }
 
 .pay-method-img {
