@@ -17,6 +17,7 @@ body {
     background-color: var(--background);
     margin: 0;
     color: var(--white);
+    font-family: 'Cairo', sans-serif;
 }
 
 a {
@@ -35,23 +36,25 @@ main {
     padding-bottom: 60px;
 }
 
+h1 {
+    display: none;
+}
+
 /* Removes all text margin */
 h1, h2, h3, h4, h5, p {
     margin: 0;
 }
 
-.h1box {
+.h2box {
     display: flex;
     justify-content: center;
     padding-top: 60px;
     padding-bottom: 100px;
 }
 
-h1 {
+h2 {
     font-size: 70px;
 }
-
-
 
 
 /* ====== Order container ======*/
@@ -92,7 +95,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border-bottom: 1px solid var(--white);
-    max-height: 50px;
+    max-height: 70px;
 }
 
 .price {
@@ -100,11 +103,40 @@ h1 {
     justify-content: right;
 }
 
-h2 {
+h3 {
     font-size: 40px;
 }
 
 /* Payment method, paypal, visa, mastercard */
+
+
+fieldset {
+    border: none;
+}
+
+label {
+    display: grid;
+}
+
+.checkbox-field {
+    display: none; 
+}
+
+.checkbox-label {
+    display: inline-block;
+    width: 25px; 
+    height: 25px; 
+    background-color: var(--background); 
+    border-radius: 50%; 
+    border: 2px solid var(--white); 
+    cursor: pointer;
+}
+
+.checkbox-field:checked + .checkbox-label {
+    background-image: url("/SquareEyes/image/circle.png"); 
+    background-size: cover; 
+    
+}
 
 .pay-method-img {
     max-width: 70px;
@@ -133,21 +165,6 @@ h2 {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.btn-circle {
-    display: inline-grid;
-    width: 30px;
-    height: 30px;
-    border-radius: 50px;
-    margin-left: auto;  
-}
-
-.circle {
-    border: 2px solid var(--white);
-    border-radius: 50px;
-    max-width: 20px;
-    max-height: 20px;  
 }
 
 /* Card information */
@@ -289,35 +306,51 @@ h5 {
     box-shadow: 0 0 25px 1px rgba(183, 180, 180, 0.349);
 }
 
+
+
 /* ---------- @Media queries 1400px ---------- */
 
 @media screen and (max-width: 1400px ){
 
-    /* Big movie image */
-
-    .img-container img, .shadow-overlay, .info-container {
-        width: 90%;
-        height: 100%;
+    .h2box {
+        padding-top: 40px;
+        padding-bottom: 80px;  
     }
     h2 {
-        font-size: 60px;
+        font-size: 50px;
         padding-top: 0px;
     }
-    h3 {
-        font-size: 14px;
-    }
-    .textbox {
-        padding-left: 35px;
-    } 
-    .textinfo {
-        padding-bottom: 35px;
-    }
-    .itembox {
-        padding-bottom: 35px;
-        padding-right: 35px;
-        padding-top: 35px;
+
+    /* Checkout container */
+    /* Image */
+
+    .img-container img, .order-container {
+        width: 400px;
+        height: 400px;
     }
 
+    /* Title and price */
+    
+    h3 {
+        font-size: 18px;
+    }
+
+    /* Card information */
+    
+    .typefield {
+        height: 40px;
+    }
+
+    /* Button */
+
+    .btn-container {
+        gap: 5px;
+    }
+    .btn {
+        width: 220px;
+        height: 50px;
+        font-size: 20px;
+    }
 
     /* Movies */
 
@@ -331,13 +364,6 @@ h5 {
         display: none;
     } 
     
-    /* Button */
-
-    .btn {
-        width: 220px;
-        height: 50px;
-        font-size: 20px;
-    }
 }
 
 /* ---------- @Media queries 850px ---------- */
@@ -345,32 +371,73 @@ h5 {
 @media screen and (max-width: 850px ){
 
     main {
-        padding-bottom: 30px;
-    }
-    .pagename {
-        font-size: 10px;
-        font-weight: 100;
+        padding-bottom: 30px;        
     }
 
-    /* Big movie image */
+    /* Checkout container */
 
-    .big-img-container {
-        display: block;
-        width: 100%;
+
+    .h2box {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    h2 {
+        font-size: 25px;
+        padding-top: 0px;
+    }
+
+    /* Image */
+
+    .img-container {
+        justify-content: center;
     }
     .img-container img {
-        width: 100%;
-        box-shadow: 0 0 15px 1px rgba(255, 255, 255, 0.349);
-    }
-    .img-container img {
-        width: 100%;
-        height: 100%;
-    }
-    .shadow-overlay {
-        display: none;
+        width: 250px;
+        height: 250px;
     }
 
-    /* Info on big image pushed down */
+    /* Order container */
+
+    .order-container {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+    
+
+    /* Payment */
+    .checkout-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: 1200px;
+    }
+
+    /* Title and price */
+
+    .titlebox {
+        justify-self: center;
+        width: 250px;
+    }
+
+    /* Payment method */
+    
+    .checkbox-label {
+        width: 20px; 
+        height: 20px;
+    } 
+
+    /* Card information */
+    
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        width: 250px;
+    }
+    .pay-method-img {
+        max-width: 50px;
+    }
 
     .btn {
         width: 100px;

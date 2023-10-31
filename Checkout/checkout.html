@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Webstreaming site where you can buy movies and watch them online">
+    <meta name="description" content="Checkout page">
     <script src="https://kit.fontawesome.com/aacfbda896.js" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <h1>Checkout</h1>
     <header class="navmodul">
         <div class="sectionnav">
             <span>
@@ -39,8 +40,8 @@
     </header>
     <main>
         <section class="main-container">
-            <div class="h1box">
-                <h1>You are now ordering</h1>
+            <div class="h2box">
+                <h2>You are now ordering</h2>
             </div>
             <section class="checkout-container">
                 <div class="img-container">
@@ -49,46 +50,49 @@
                 <section class="order-container">
                     <section class="titlebox">
                         <div class="title">
-                            <h2>Batman</h2>
+                            <h3>Batman</h3>
                         </div> 
                         <div class="price">
-                            <h2>99 Kr</h2>
+                            <h3>99 Kr</h3>
                         </div>
                     </section>
-                    <section class="payment-container">
+                    <fieldset class="payment-container">
                         <div class="pp">
-                            <button class="payment-method-circle btn-circle" 
-                            onclick="selectPaymentMethod('paypal')"></button>
+                            <input type="checkbox" id="paypal" class="checkbox-field"
+                            name="paypal" checked>
+                            <label for="paypal" class="checkbox-label"></label>
                             <img src="/SquareEyes/image/PayPal.png" 
                             alt="Image of PayPal" class="pay-method-img">
                         </div>
                         <div class="visa">
-                            <button class="payment-method-circle btn-circle" 
-                            onclick="selectPaymentMethod('visa')"></button>
+                            <input type="checkbox" id="visa" class="checkbox-field"
+                            name="visa" checked>
+                            <label for="visa" class="checkbox-label"></label>
                             <img src="/SquareEyes/image/Visa.png" 
                             alt="Image of Visa" class="pay-method-img">
                         </div>
                         <div class="mc">
-                            <button class="payment-method-circle btn-circle" 
-                            onclick="selectPaymentMethod('mastercard')"></button>
+                            <input type="checkbox" id="mastercard" class="checkbox-field"
+                            name="mastercard" checked>
+                            <label for="mastercard" class="checkbox-label"></label>
                             <img src="/SquareEyes/image/Mastercard.png" 
                             alt="Image of Mastercard" class="pay-method-img">
                         </div>
-                    </section>
+                    </fieldset>
                     
                     <section class="info-container">
                         <form action="textfield">
-                            <input type="text" placeholder="Name" class="typefield">
+                            <input type="text" placeholder="Name" class="typefield" id="typefield">
                         </form>
                         <form action="textfield">
-                            <input type="text" placeholder="Card number" class="typefield">
+                            <input type="text" placeholder="Card number" class="typefield" id="typefield">
                         </form>
                         <div class="exp-cvc-box">
                             <form action="textfield-small-1">
-                                <input type="text" placeholder="Exp date" class="typefield">
+                                <input type="text" placeholder="Exp date" class="typefield" id="typefield">
                             </form>
                             <form action="textfield-small-2">  
-                                <input type="text" placeholder="CVC" class="typefield">
+                                <input type="text" placeholder="CVC" class="typefield" id="typefield">
                             </form>
                         </div>  
                     </section>
