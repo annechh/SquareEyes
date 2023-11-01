@@ -58,16 +58,15 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
-    width: 80%;
+    width: 100%;
 }
-.center-box1 {
-    display: block;
-}
+
 
 /* Image */
 
 .box1 img, .box2 img {
-    max-width: 80%;
+    max-width: 500px;
+    height: auto;
     padding-right: 40px;
     padding-left: 40px;
 }
@@ -79,12 +78,21 @@ h1 {
 
 /* Text */
 .textbox1, .textbox2, .textbox3 {
-    max-width: 70%;
+    max-width: 80%;
     text-align: center;
     align-self: center;
-    font-size: 1.2vw;
     padding-right: 40px;
     padding-left: 40px;
+}
+
+h4 {
+    font-size: 22px;
+    font-weight: 100;
+    padding: 10px 0;
+}
+
+.textbox1 {
+    justify-self: left;
 }
 
 .textbox2 {
@@ -124,8 +132,36 @@ h1 {
 
 @media screen and (max-width: 1400px ) {
 
+    .center-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
     /* Image */
+    .box1 img, .box2 img {
+        justify-self: center;
+    }
 
+    /* Text */
+    .textbox1, .textbox2 {
+        max-width: 100%;
+        justify-self: center;
+    }
+    
 
+    /* Logo */
+    .iconbox img {
+        height: 70px;
+    }
 }
 
+/* ---------- @Media queries 850px ---------- */
+
+@media screen and (max-width: 850px ){
+
+    h4 {
+        font-size: 12px;
+        font-weight: 100;
+        padding: 10px 0;
+    }
+}
