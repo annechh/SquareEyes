@@ -20,7 +20,6 @@ body {
     font-family: 'Cairo', sans-serif;
 }
 
-
 /*=======================Main under=======================*/
 
 main {
@@ -37,6 +36,8 @@ h1 {
     display: none;
 }
 
+/*----- Big image under -----*/
+
 .big-img-container {
     width: 100%;
     height: 100%;
@@ -44,8 +45,6 @@ h1 {
     justify-content: center;
     position: relative;
 }
-
-/*----- Big image under -----*/
 
 .img-container {
     width: 100%;
@@ -69,7 +68,6 @@ h1 {
     background-color: #00000039;
     z-index: 0;
 }
-
 
 /*----- Info over image under -----*/
 
@@ -95,7 +93,6 @@ h2 {
 .checksign-box img{
     width: 15%;
 }
-
 
 .h3-box {
     display: flex;
@@ -128,7 +125,6 @@ h3 {
     cursor: pointer;
     transition: 0.3s ease;
 }
-
 
 /*----- Suggested movies under -----*/
 
@@ -210,12 +206,11 @@ h5 {
 }
 
 
-
 /* ---------- @Media queries 1400px ---------- */
 
 @media screen and (max-width: 1400px ) {
 
-    /*----- Big image under -----*/
+    /*----- Big image and info -----*/
 
     .img-container img{
         z-index: -1;
@@ -225,7 +220,6 @@ h5 {
     .img-container img, .shadow-overlay, .info-container {
         width: 90%;
     }
-
     h2 {
         font-size: 35px;
     }
@@ -263,18 +257,15 @@ h5 {
         padding-bottom: 30px;        
     }
 
-    /*----- Big image under -----*/
+    /*----- Big image and info -----*/
 
     .img-container img{
         z-index: -1;
-        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.349);
+        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.349);
     }
-
     .img-container img, .shadow-overlay, .info-container {
         width: 100%;
     }
-
-
     h2 {
         font-size: 20px;
     }
