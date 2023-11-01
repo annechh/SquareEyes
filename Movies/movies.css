@@ -359,4 +359,13 @@ h5 {
         grid-template-columns: 1fr 1fr;
         gap: 15px;
     }
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .title-headline {
+        display: flex;
+        justify-content: center;
+    }
 }
