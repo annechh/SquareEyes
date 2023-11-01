@@ -56,6 +56,14 @@ h2 {
     font-size: 70px;
 }
 
+a {
+    color: var(--white);
+}
+
+a:visited {
+    color: var(--white);
+}
+
 
 /* ====== Order container ======*/
 
