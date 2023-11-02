@@ -36,13 +36,18 @@ h1, h2, h3, h4, h5, p {
     margin: 0;
 }
 
+h1 {
+    display: none;
+}
+
+/*------ Background image ------*/
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/*----------Background image and shadow under----------*/
 .image-container {
     display: flex;
     justify-content: center;
@@ -55,6 +60,8 @@ h1, h2, h3, h4, h5, p {
     height: 100%;
 }
 
+/* Shadow on image */
+
 .shadow-overlay {
     position: absolute;
     width: 100%;
@@ -62,7 +69,7 @@ h1, h2, h3, h4, h5, p {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-/*----------Background image and shadow above----------*/
+/* Items */
 
 .item-container {
     position: absolute;
@@ -74,22 +81,26 @@ h1, h2, h3, h4, h5, p {
     align-items: center;
 }
 
+/* Text */
+
 h4 {
     font-size: 25px;
-    margin: 0 0 5px  0;
 }
+
+/* Logo */
 
 .minilogo {
     max-width: 150px;
 }
 
-.name, .email {
+/* Text field */
+
+.input-name, .input-email {
     width: 500px;
     height: 40px;
     margin-bottom: 20px;
     background-color: var(--blackfaded);
     border-radius: 10px;
-    border-color: var(--white);
     padding-left: 20px;
     font-size: 16px;
     color: var(--white);
@@ -97,7 +108,7 @@ h4 {
     outline: 2px solid var(--whitefaded);
 }
 
-.typetext {
+.type-text {
     width: 500px;
     height: 200px;
     background-color: var(--blackfaded);
@@ -112,21 +123,23 @@ h4 {
     outline: 2px solid var(--whitefaded);
 }
 
+/* Button */
+
 .btn-container {
     display: flex;
     justify-content: center;
 }
 
 .btn {
-    display: flex;
-    justify-content: center;
-    width: 200px;
-    background-image: linear-gradient(to bottom, #072531, #106B8D, #106B8D, #072531);
+    width: 300px;
+    height: 60px;
+    background-image: 
+    linear-gradient(to bottom, #072531, #106B8D, #106B8D, #072531);
     color: var(--white);
     border-radius: 50px;
     border: none;
     outline: 2px solid var(--whitefaded);
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -135,4 +148,96 @@ h4 {
     transition: 0.3s ease;
     transform: scale(1.1);
     cursor: pointer;
+}
+
+
+/* ---------- @Media queries 1400px ---------- */
+
+@media screen and (max-width: 1400px ) {
+
+    /* Text */
+    h4 {
+        font-size: 20px;
+    }
+
+    /* Logo */
+    .minilogo {
+        max-width: 100px;
+    }
+
+    /* Text field */
+    .input-name, .input-email, .type-text {
+        width: 400px;
+    }
+
+    /* Button */
+    .btn {
+        width: 220px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* ---------- @Media queries 850px ---------- */
+
+@media screen and (max-width: 850px ) {
+
+    main {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .item-container {
+        position: relative;
+        margin-top: 30px;
+    }
+    .textbox {
+        margin-bottom: 30px;
+    }
+    
+    /* Button */
+    
+    .btn {
+        width: 150px;
+        height: 35px;
+        font-size: 16px;
+        outline: 1px solid var(--whitefaded);
+    }
+}
+
+/* ---------- @Media queries 550px ---------- */
+
+@media screen and (max-width: 550px ) {
+
+    /* Text */
+    .items {
+        justify-content: center;
+    }
+    h4 {
+        font-size: 16px;
+        text-align: center;
+    }
+    /* Logo */
+    .minilogo {
+        display: none;
+    }
+    /* Text field */
+    .input-name, .input-email, .type-text {
+        width: 240px;
+    }
+    .input-name, .input-email {
+        height: 35px;
+    }
+
+    /* Button */
+    .btn {
+        width: 100px;
+        height: 25px;
+        font-size: 12px;
+        outline: 1px solid var(--whitefaded);
+    }
+
 }
