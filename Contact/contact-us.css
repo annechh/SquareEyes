@@ -23,7 +23,6 @@ body {
 
 
 
-
 /*=======================Main under=======================*/
 
 main {
@@ -239,5 +238,4 @@ h4 {
         font-size: 12px;
         outline: 1px solid var(--whitefaded);
     }
-
 }
