@@ -76,7 +76,7 @@ a:visited {
 }
 
 .order-container {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     width: 600px;
     align-content: space-between;
     display: grid;
@@ -369,8 +369,7 @@ h5 {
     }
     .movie5{
         display: none;
-    } 
-    
+    }    
 }
 
 /* ---------- @Media queries 850px ---------- */
@@ -382,7 +381,6 @@ h5 {
     }
 
     /* Checkout container */
-
 
     .h2box {
         padding-top: 30px;
@@ -416,7 +414,6 @@ h5 {
     .checkout-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         max-height: 1200px;
     }
 
@@ -443,7 +440,7 @@ h5 {
         width: 250px;
     }
     .pay-method-img {
-        max-width: 50px;
+        max-width: 40px;
     }
 
     /* Button */
