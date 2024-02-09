@@ -1,9 +1,9 @@
-@import url(/SquareEyes/footer.css);
-@import url(/SquareEyes/menu.css);
-@import url(/SquareEyes/hover.css);
+@import url(footer.css);
+@import url(menu.css);
+@import url(hover.css);
 
-@import url(/SquareEyes/media-menu.css);
-@import url(/SquareEyes/media-footer.css);
+@import url(media-menu.css);
+@import url(media-footer.css);
 
 
 :root {
@@ -192,7 +192,7 @@ h4 {
     position: relative;
 }
 
-.movieImg {
+.movie-img {
     width: 100%;
     height: 100%;
     display: flex;
@@ -223,7 +223,7 @@ h5 {
 
 /* Movie image */
 
-.movieImg .movie{
+.movie-img .movie{
     width: 100%;
     height: 100%;
     transition: transform 0.3s ease;
@@ -231,7 +231,7 @@ h5 {
     box-shadow: 0 0 25px 1px rgba(95, 94, 94, 0.349);
 }
 
-.movieImgtall .movie {
+.movie-imgtall .movie {
     width: 100%;
     height: 100%;
     transition: transform 0.3s ease;
@@ -241,14 +241,14 @@ h5 {
 
 /* Movie image Hover */
 
-.movieImg .movie:hover{
+.movie-img .movie:hover{
     transition: 0.3s ease;
     transform: scale(1.04);
     cursor: pointer;
     box-shadow: 0 0 25px 1px rgba(183, 180, 180, 0.349);
 }
 
-.movieImgtall .movie:hover, .textoverlaymovie:hover{
+.movie-imgtall .movie:hover, .textoverlaymovie:hover{
     transition: 0.3s ease;
     transform: scale(1.04);
     cursor: pointer;

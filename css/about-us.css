@@ -1,9 +1,9 @@
-@import url(/SquareEyes/footer.css);
-@import url(/SquareEyes/menu.css);
-@import url(/SquareEyes/hover.css);
+@import url(footer.css);
+@import url(menu.css);
+@import url(hover.css);
 
-@import url(/SquareEyes/media-menu.css);
-@import url(/SquareEyes/media-footer.css);
+@import url(media-menu.css);
+@import url(media-footer.css);
 
 :root {
     --background: #0E0E0E;
