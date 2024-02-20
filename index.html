@@ -3,143 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Buy your movies and stream them online - SquareEyes connecting film lovers">
-    <script src="https://kit.fontawesome.com/aacfbda896.js" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-    <link rel="icon" href="image/logoicon.png" type="image.png">
+    
+    <link rel="icon"  href="/SquareEyes/imagess/logoicon.png" type="image.png">
+    <link rel="stylesheet" href="/SquareEyes/css/styles.css">
+    
+    <script src="https://kit.fontawesome.com/aacfbda896.js" crossorigin="anonymous"></script>
+    <script type="module" src="javascript/script.mjs"></script>
 
-    <script type="module" src="javascript/script.js"></script>
-    <link href="css/styles.css" rel="stylesheet">    
 
-    <title>SquareEyes Home page</title>
+    <title>SquareEyes homepage</title>
 </head>
 
+
 <body>
-    <!-- Menu -->
     <header class="navmodul">
         <div class="sectionnav">
             <span>
                 <a href="/index.html" rel="SquareEyes Homepage"> 
-                <img src="image/logo.png" alt="Webpage Logo" class="logo"></a>
+                <img src="images/logo.png" alt="Webpage Logo" class="logo"></a>
             </span>
                 <nav class="menu">
                     <ul>
                         <li class="home"><a href="/index.html">Home</a></li>
-                        <li class="movies"><a href="html/movies.html">Movies</a></li>
+                        <!-- <li class="movies"><a href="html/movies.html">Movies</a></li> -->
                         <li class="shop-cart"><i class="fa-solid fa-cart-shopping"></i></li>
-                        <li class="magglass"><i class="fa-solid fa-magnifying-glass"></i></li>
+                        <!-- <li class="magglass"><i class="fa-solid fa-magnifying-glass"></i></li> -->
                     </ul>            
                 </nav>
             <span>
-            <img src="image/profileimg.png" alt="Profile image" class="profileimg">
+            <img src="images/profileimg.png" alt="Profile image" class="profileimg">
             </span> 
         </div>    
     </header>
 
     <main>
-        <!-- Big movie image -->
-        <h1 class="pagename">HOME</h1>
-        <div class="big-img-container">
-            <div class="img-container">
-                <a href="html/movieinfo.html" class="big-movie-link"> 
-                <img src="image/Batman5.png" alt=" Batman movie" class="headerimg">
-                </a>
-            </div>           
-            <div class="info-container">
-                <a href="html/movieinfo.html" 
-                class="big-movie-link"><h2 class="batman">BATMAN</h2></a>
-            </div>
+        <div class="widthStyleMainContent">
+            <section class="sortGenreContainer">
+                <details class="sort sortByGenre" id="sortByGenre">
+                    <summary>Genre</summary>
+                    <ul id="genreList">
+                        <li>Show All</li>
+                        <li>Action</li>
+                        <li>Comedy</li>
+                        <li>Drama</li>
+                        <li>Horror</li>
+                        <li>Kids</li>
+                    </ul>
+                </details>
+            </section> 
+            
+            <section class="movieWrapper" id="movieWrapper"></section>
         </div>
+    </main>
 
-        <!-- Small movie images -->
-        <details>
-            <summary>Genre</summary>
-            <ul>
-                <li>Action</li>
-                <li>Horror</li>
-                <li>Comedy</li>
-                <li>Drama</li>
-                <li>Kids</li>
-            </ul>
-        </details>
-        <div class="sort-by" id="sort-by">Sort-By</div>
-        <section class="sectionmovies top-movie-container-margin">
-            <div class="container">
-                <div class="title-container">
-                    <h4 class="title-headline">Popular</h4> 
-                </div>
-                <div class="items" id="items">
-                    
-                </div>
-            </div>          
-        </section>
-        <section class="sectionmovies">
-            <div class="container">
-                <div class="title-container">
-                    <h4 class="title-headline">New arrivals</h4>
-                </div>
-                <div class="items" id="items">
-                    
-                </div>  
-            </div>        
-        </section>
-        <section class="sectionmovies">
-            <div class="container">
-                <div class="title-container">
-                    <h4 class="title-headline">Take a look at</h4>
-                </div>
-                <div class="items">
-                    <div class="moviecontainer movie1">
-                        <div class="movie-img" id="movie-img">
-                            <img src="image/small/TheAddamsFamilysmall.png" 
-                            alt=" The Addams Family movie" class="movie">
-                            <div class="movie-title"><h5>The Addams Family</h5></div>   
-                        </div>
-                    </div>
-                    <div class="moviecontainer movie2">
-                        <div class="movie-img" id="movie-img">    
-                            <img src="image/small/OnceUponaTimesmall1.png" 
-                            alt=" Once upon a Time movie" class="movie">
-                            <div class="movie-title"><h5>Once upon a Time</h5> </div>
-                        </div>
-                    </div>
-                    <div class="moviecontainer movie3">
-                        <div class="movie-img" id="movie-img">
-                            <a href="html/movieinfo.html">
-                            <img src="image/small/Batmansmall3.png" 
-                            alt=" Batman movie" class="movie"></a>
-                            <div class="movie-title"><h5>Batman</h5> </div>
-                        </div>
-                    </div>
-                    <div class="moviecontainer movie4">
-                        <div class="movie-img" id="movie-img">
-                            <img src="image/small/screamsmall.png" 
-                            alt=" Scream movie" class="movie">
-                            <div class="movie-title"><h5>Scream</h5>  </div>
-                        </div>
-                    </div>
-                    <div class="moviecontainer movie5">
-                        <div class="movie-img" id="movie-img">
-                            <img src="image/small/FastandFurioussmall.png" 
-                            alt=" Fast and Furious, Hobbs and Shaw movie" class="movie">
-                            <div class="movie-title"> 
-                                <h5>Fast and Furious</h5> 
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-            </div>        
-        </section>
-    </main>    
-
-    <!-- Footer -->
     <footer>
         <div class="item-block">
             <div>
                 <ul class="footer-info">
-                    <li><a href="html/about-us.html"> About Us</a></li>
+                    <li><a href="html/contact-us.html"> About Us</a></li>
                     <li>Follow Us</li>
                     <li><a href="html/contact-us.html"> Contact Us</a></li>
                 </ul>
@@ -154,7 +78,7 @@
                 <div class="footer-line"></div>
             </div>
             <div class="footer-logo-block">
-                <a href="/index.html"> <img src="image/logo.png" 
+                <a href="/index.html"> <img src="images/logo.png" 
                     alt="Webpage Logo" class="footer-logo"></a>
             </div>
         </div>

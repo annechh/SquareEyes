@@ -1,9 +1,10 @@
+@import url(header.css);
 @import url(footer.css);
-@import url(menu.css);
 @import url(hover.css);
 
 @import url(media-menu.css);
 @import url(media-footer.css);
+
 
 :root {
     --background: #0E0E0E;

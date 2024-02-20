@@ -1,162 +1,39 @@
+@import url(header.css);
+@import url(basic-styles.css);
 @import url(footer.css);
-@import url(menu.css);
-@import url(hover.css);
+@import url(genreSort.css);
+@import url(movieInfo.css);
 
-@import url(media-menu.css);
-@import url(media-footer.css);
+@import url(/css/css-effects/hover.css);
 
-:root {
-    --background: #0E0E0E;
-    --white: #d9d9d9;
-    --whitefaded: #d9d9d97c;
-    --green: #06A917;
-    --footer: #0A0A0A;
-}
-
-body {
-    background-color: var(--background);
-    margin: 0;
-    color: var(--white);
-    font-family: 'Cairo', sans-serif;
-}
-
-a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-a:visited {
-    color: var(--white);
-}
-
-
-/*=======================Main under=======================*/
 
 main {
-    padding-bottom: 60px;
-}
-
-h1, h2, h3, h4, h5, p {
-    margin: 0;
-}
-
-.pagename {
-    margin-top: 2%;
-    margin-left: 5%;
-    position: relative;
-    padding: 0;
-    font-size: 16px;
-}
-
-/* ----------- Big movie under ------------*/
-
-
-.big-img-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.img-container {
-    width: 100%;
-    max-height: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.img-container img {
-    width: 90vw;
-    height: 100%;
-    z-index: -1;
-    box-shadow: 0 0 25px 5px rgb(69 11 7);
-}
-
-.big-movie-link {
-    z-index: 1;
-}
-
-.info-container {
-    width: 90vw;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-h2 {
-    font-family: 'Bruno Ace SC', sans-serif;
-    font-size: 4vw;
-    text-shadow: 10px 10px 8px rgba(0, 0, 0, 0.999);
-    padding-left: 3%;
-    padding-bottom: 6%;
-    z-index: 2;
-}
-
-
-/* ---------------- All movies under ---------------*/
-
-.top-movie-container-margin {
-    margin-top: 60px;
-}
-
-.container {
-    width: 90%;
-}
-
-h4 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.sectionmovies {
     width: 100%;
     display: flex;
     justify-content: center;
-    position: relative;
 }
 
-.items {
+.widthStyleMainContent {
+    max-width: 1600px;
+    margin: 100px 35px;
+}
+
+.movieWrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 1vw;
+    gap: 20px;
+    margin: 100px 0;
+    justify-content: center;
 }
 
-.movie-img {
-    width: 100%;
-    max-width: 200px;
+.movieImgContainer {
+    max-width: 250px;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.moviecontainer {
-    margin-bottom: 30px;
-}
-
-/* Movie title */
-
-.movie-title {
-    display: flex;
-    justify-content: center;
-    white-space: nowrap;
-}
-
-h5 {
-    margin: 0;
-    font-size: 16px;
-}
-
-.small-movie-link {
-    width: 100%;
-    max-height: 100%;
-}
-
-/* Movie image */
-
-.movie-img .movie{
+.movieImgContainer img{
     width: 100%;
     height: 100%;
     transition: transform 0.3s ease;
@@ -164,107 +41,19 @@ h5 {
     box-shadow: 0 0 25px 1px rgba(95, 94, 94, 0.349);
 }
 
-/* Movie image Hover */
-
-.movie-img .movie:hover{
-    transition: 0.3s ease;
-    transform: scale(1.04);
-    cursor: pointer;
-    box-shadow: 0 0 25px 1px rgba(183, 180, 180, 0.349);
+.movieImgContainer a {
+    height: 100%;
 }
 
-
-
-/* ---------- @Media queries 1400px ---------- */
-
-@media screen and (max-width: 1400px ) {
-    
-    .img-container img {
-        box-shadow:0 0 18px 4px rgb(69 11 7);
-    }
-
-    /* Items on background image */
-    .text-headline {
-        font-size: 35px;
-    }
-    h3 {
-        font-size: 16px;
-    } 
-
-    /* Button */
-    .btn {
-        width: 220px;
-        height: 50px;
-        font-size: 20px;
-    }
-
-    /* Movies */
-
-    .container {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-    .moviecontainer {
-        margin-bottom: 15px;
-    }
-    .movie5{
-        display: none;
-    }  
+.priceCartItems {
+    display: flex;
+    justify-content: space-between;
 }
 
-
-@media screen and (max-width: 850px ) {
-    main{
-        padding-bottom: 15px;
-    }
-
-    .img-container img {
-        box-shadow:0 0 14px 2px rgb(69 11 7);
-        width: 100vw;
-    }
-
-    /* Items on background image */
-    
-    .pagename {
-        font-size: 10px;
-        font-weight: 100;
-    }
-
-    /* Button */
-
-    .top-movie-container-margin {
-        margin-top: 10px;
-    }
-    
-    /* Movies */
-
-    h4 {
-        font-size: 14px;
-        margin-bottom: 0;
-    }
-    h5 {
-        font-size: 12px;
-    }
-    .items {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-    }
-    .title-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .title-headline {
-        display: flex;
-        justify-content: center;
-    }
+.priceCartItems .fa-solid, p {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: var(--white);
+    padding: 10px;
 }
-
-
-
-
-
-
-
-

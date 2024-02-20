@@ -9,11 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
 
-    <link rel="icon"  href="/image/logoicon.png" type="image.png">
+    <link rel="icon"  href="/SquareEyes/images/logoicon.png" type="image.png">
+
+    <script defer src="/javascript/movieInfo.mjs"></script>
+
     <link href="/css/movieinfo.css" rel="stylesheet">
     <title>SquareEyes Movie Info</title>
     
-    <title>SquareEyes</title>
 </head>
 
 <body>
@@ -22,7 +24,7 @@
         <div class="sectionnav">
             <span>
                 <a href="/index.html" rel="SquareEyes Homepage"> 
-                <img src="/image/logo.png" alt="Webpage Logo" class="logo"></a>
+                <img src="/SquareEyes/images/logo.png" alt="Webpage Logo" class="logo"></a>
             </span>
                 <nav class="menu">
                     <ul>
@@ -33,7 +35,7 @@
                     </ul>            
                 </nav>
             <span>
-            <img src="/image/profileimg.png" alt="Profile image" class="profileimg">
+            <img src="/SquareEyes/images/profileimg.png" alt="Profile image" class="profileimg">
             </span> 
         </div>    
     </header>
@@ -41,97 +43,29 @@
     <main>
         <!-- Big movie image -->
         <h1 class="pagename">MOVIE INFO</h1>
-        <section class="big-img-container">
-            <div class="img-container">
-                <img src="/image/Batman2.png" 
-                alt=" Batman movie" >
-                <div class="shadow-overlay"></div>
+        <section class="big-img-container" id="movieInfoContainer">
+            <div class="img-container" id="movieImgContainer">
+                
             </div>
             <div class="info-container">  
-                <div class="textbox">
-                    <div class="text-headline">
-                        <h2>Batman</h2>
+                <div class="textbox" >
+                    <div class="text-headline" id="movieTitleContainer">
+                        
                     </div>
-                    <div class="textinfo">
-                        <h3> When a sadistic serial killer begins murdering key 
-                            political figures in Gotham, Batman is forced to 
-                            investigate the city's hidden corruption and question his family's 
-                            involvement.</h3>
-                        <h3>Year 2022 | Age 12 | 2h 56m<br>
-                            Genre: Action | Adventure</h3>
-                        <h3>Director - Matt Reeves <br>
-                            Stars - Robert Pattison, Zoë Kravitz, Jeffrey Wright </h3>
+                    <div class="allMovieInfo" id="allMovieInfo">
+                        
                     </div>
                 </div>
                 <div class="itembox">
                         <div class="icon-container">
                             <i class="fa-regular fa-heart"></i>
                         </div>
-                    <div class="btn-container">
-                        <a href="checkout.html"><button class="btn">
-                            Buy 99 Kr
-                        </button></a>
+                    <div class="btn-container" id="btnContainer">
+                        
                     </div>              
                 </div>
             </div>
         </section>
-
-        <!-- Small movie images -->
-        <section class="sectionmovies top-movie-container-margin">
-            <div class="container">
-                <div class="title-container">
-                    <h4 class="title-headline">You might also like</h4> 
-                </div>
-                <div class="items">
-                    <div class="moviecontainer movie1">
-                        <div class="movie-img" id="movie-img">
-                            <img src="/image/small/Sweetheartsmall.png" 
-                            alt=" Sweetheart movie" class="movie">
-                            <div class="movie-title"> 
-                                <h5>Sweetheart </h5>
-                            </div>   
-                        </div>
-                    </div>
-                    <div class="moviecontainer movie2">
-                        <div class="movie-img" id="movie-img">
-                            <img src="/image/small/FastandFurioussmall.png" 
-                            alt=" Fast and Furious, Hobbs and Shaw movie" class="movie">
-                            <div class="movie-title"> 
-                                <h5>Fast and Furious</h5> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="moviecontainer movie3">
-                        <div class="movie-img" id="movie-img">
-                            <a href="/html/movieinfo.html">
-                            <img src="/image/small/Batmansmall3.png" 
-                            alt=" Batman movie" class="movie"></a>
-                            <div class="movie-title"> 
-                                <h5>Batman</h5> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="moviecontainer movie4">
-                        <div class="movie-img" id="movie-img">
-                            <img src="/image/small/Godzillasmall1.png" 
-                            alt=" Godzilla movie" class="movie">
-                            <div class="movie-title"> 
-                                <h5>Godzilla</h5> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="moviecontainer movie5">
-                        <div class="movie-img" id="movie-img">
-                            <img src="/image/small/Toystorysmall2.png" 
-                            alt=" Toy Story 4 movie" class="movie">
-                            <div class="movie-title"> 
-                                <h5>Toy Story 4</h5> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>          
-        </section> 
     </main>
 
     <!-- Footer -->
@@ -154,7 +88,7 @@
                 <div class="footer-line"></div>
             </div>
             <div class="footer-logo-block">
-                <a href="/index.html"> <img src="/image/logo.png" alt="Webpage Logo" class="footer-logo"></a>
+                <a href="/index.html"> <img src="/SquareEyes/images/logo.png" alt="Webpage Logo" class="footer-logo"></a>
             </div>
         </div>
     </footer>

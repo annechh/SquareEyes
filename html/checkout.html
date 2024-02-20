@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
 
-    <link rel="icon"  href="/image/logoicon.png" type="image.png">
+    <link rel="icon"  href="/SquareEyes/images/logoicon.png" type="image.png">
     <link href="/css/checkout.css" rel="stylesheet">
     
     <title>SquareEyes Checkout page</title>
@@ -22,7 +22,7 @@
         <div class="sectionnav">
             <span>
                 <a href="/index.html" rel="SquareEyes Homepage"> 
-                <img src="/image/logo.png" alt="Webpage Logo" class="logo"></a>
+                <img src="/SquareEyes/images/logo.png" alt="Webpage Logo" class="logo"></a>
             </span>
                 <nav class="menu">
                     <ul>
@@ -33,7 +33,7 @@
                     </ul>            
                 </nav>
             <span>
-            <img src="/image/profileimg.png" 
+            <img src="/SquareEyes/images/profileimg.png" 
             alt="Profile image" class="profileimg">
             </span> 
         </div>    
@@ -46,7 +46,7 @@
             </div>
             <section class="checkout-container">
                 <div class="img-container">
-                    <img src="/image/Batman-square.png" alt=" Batman Movie">
+                    <img src="/SquareEyes/images/Batman-square.png" alt=" Batman Movie">
                 </div>
                 <section class="order-container">
                     <section class="titlebox">
@@ -63,40 +63,34 @@
                             <input type="radio" id="paypal" class="checkbox-field"
                             name="payment" checked>
                             <label for="paypal" class="checkbox-label"></label>
-                            <img src="/image/PayPal.png" 
+                            <img src="/SquareEyes/images/PayPal.png" 
                             alt=" PayPal" class="pay-method-img">
                         </div>
                         <div class="visa">
                             <input type="radio" id="visa" class="checkbox-field"
                             name="payment" >
                             <label for="visa" class="checkbox-label"></label>
-                            <img src="/image/Visa.png" 
+                            <img src="/SquareEyes/images/Visa.png" 
                             alt=" Visa" class="pay-method-img">
                         </div>
                         <div class="mc">
                             <input type="radio" id="mastercard" class="checkbox-field"
                             name="payment" >
                             <label for="mastercard" class="checkbox-label"></label>
-                            <img src="/image/Mastercard.png" 
+                            <img src="/SquareEyes/images/Mastercard.png" 
                             alt=" Mastercard" class="pay-method-img">
                         </div>
                     </fieldset>
                     <!-- Card information -->
                     <section class="info-container">
                         <form action="textfield">
-                            <input type="text" placeholder="Name" class="typefield" id="typefield">
+                            <input type="text" placeholder="Name" class="typefield" id="typefield" required>
+                            <input type="text" placeholder="Card number" class="typefield" id="typefield" required>
+                            <div class="exp-cvc-box">
+                                <input type="text" placeholder="Exp date" class="typefield" id="typefield" required>
+                                <input type="text" placeholder="CVC" class="typefield" id="typefield" required>
+                            </div>  
                         </form>
-                        <form action="textfield">
-                            <input type="text" placeholder="Card number" class="typefield" id="typefield">
-                        </form>
-                        <div class="exp-cvc-box">
-                            <form action="textfield-small-1">
-                                <input type="text" placeholder="Exp date" class="typefield" id="typefield">
-                            </form>
-                            <form action="textfield-small-2">  
-                                <input type="text" placeholder="CVC" class="typefield" id="typefield">
-                            </form>
-                        </div>  
                     </section>
                     <section class="btn-container">
                         <div class="btnbox">
@@ -121,7 +115,7 @@
                 <div class="items">
                     <div class="moviecontainer movie1">
                         <div class="movie-img" id="movie-img">
-                            <img src="/image/small/Sweetheartsmall.png" 
+                            <img src="/SquareEyes/images/small/Sweetheartsmall.png" 
                             alt=" Sweetheart movie" class="movie">
                             <div class="movie-title"> 
                                 <h5>Sweetheart </h5>
@@ -130,7 +124,7 @@
                     </div>
                     <div class="moviecontainer movie2">
                         <div class="movie-img" id="movie-img">
-                            <img src="/image/small/FastandFurioussmall.png" 
+                            <img src="/SquareEyes/images/small/FastandFurioussmall.png" 
                             alt=" Fast and Furious, Hobbs and Shaw movie" class="movie">
                             <div class="movie-title"> 
                                 <h5>Fast and Furious</h5> 
@@ -140,7 +134,7 @@
                     <div class="moviecontainer movie3">
                         <div class="movie-img" id="movie-img">
                             <a href="/html/movieinfo.html">
-                            <img src="/image/small/Batmansmall3.png" 
+                            <img src="/SquareEyes/images/small/Batmansmall3.png" 
                             alt=" Batman movie" class="movie"></a>
                             <div class="movie-title"> 
                                 <h5>Batman</h5> 
@@ -149,7 +143,7 @@
                     </div>
                     <div class="moviecontainer movie4">
                         <div class="movie-img" id="movie-img">
-                            <img src="/image/small/Godzillasmall1.png" 
+                            <img src="/SquareEyes/images/small/Godzillasmall1.png" 
                             alt=" Godzilla movie" class="movie">
                             <div class="movie-title"> 
                                 <h5>Godzilla</h5> 
@@ -158,7 +152,7 @@
                     </div>
                     <div class="moviecontainer movie5">
                         <div class="movie-img" id="movie-img">
-                            <img src="/image/small/Toystorysmall2.png" 
+                            <img src="/SquareEyes/images/small/Toystorysmall2.png" 
                             alt=" Toy Story 4 movie" class="movie">
                             <div class="movie-title"> 
                                 <h5>Toy Story 4</h5> 
@@ -190,7 +184,7 @@
                 <div class="footer-line"></div>
             </div>
             <div class="footer-logo-block">
-                <a href="/index.html"> <img src="/image/logo.png" alt="Webpage Logo" class="footer-logo"></a>
+                <a href="/index.html"> <img src="/SquareEyes/images/logo.png" alt="Webpage Logo" class="footer-logo"></a>
             </div>
         </div>
     </footer>

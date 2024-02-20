@@ -141,7 +141,7 @@ label {
 }
 
 .checkbox-field:checked + .checkbox-label {
-    background-image: url("/image/circle.png"); 
+    background-image: url("/SquareEyes/images/circle.png"); 
     background-size: cover;
 }
 
@@ -198,6 +198,7 @@ label {
     background-color: var(--textfield);
     outline: 2px solid var(--whitefaded);
     border-radius: 10px;
+    margin-bottom: 20px;
 } 
 
 /*----- Button -----*/
