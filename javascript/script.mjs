@@ -23,11 +23,12 @@ function createMovieHtml(movie) {
         movieImg.alt = movie.image.alt;
         movieImg.id = movie.id;
         movieImg.addEventListener('click', () => {
+            localStorage.setItem('movie', JSON.stringify(movie));
             console.log('clicked', movieImg);
         })
 
     let linkToMovieInfoPage = document.createElement('a');
-        // linkToMovieInfoPage.href = '/html/movieinfo.html';
+        linkToMovieInfoPage.href = 'html/movieinfo.html';
         linkToMovieInfoPage.classList.add('movie');
 
         // console.log(linkToMovieInfoPage);

@@ -27,3 +27,10 @@
     transform: scale(1.1);
     cursor: pointer;
 }
+
+
+.movieImgContainer:hover {
+    transition: 0.3 ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}

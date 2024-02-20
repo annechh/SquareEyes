@@ -1,6 +1,6 @@
 import { displayMovies } from "./script.mjs";
 
-export async function addGenreEventListener(movies) {
+export function addGenreEventListener(movies) {
     let listOfGenre = document.getElementById('genreList').children;
     console.log('list of genre:', listOfGenre.length);
     for(let genreListItem of listOfGenre) {

@@ -1,5 +1,4 @@
 
-
 let movieInfo = JSON.parse(localStorage.getItem('movie'));
 
 
@@ -45,7 +44,9 @@ const chosenMovieGenre = () => {
 
 const chosenMoviePrice = () => {
     let moviePrice = movieInfo.price;
+    let movieDiscountedPrice = movieInfo.discountedPrice;
     let movieOnSale = movieInfo.onSale;
+        
     
     let price = document.createElement('div');
         price.classList = 'moviePrice';
@@ -58,7 +59,7 @@ const chosenMoviePrice = () => {
         price.appendChild(originalPrice);
         
         if (movieOnSale) {
-            let salePrice = moviePrice;
+            let salePrice = movieDiscountedPrice;
             let salePriceElement = document.createElement('h3');
             salePriceElement.textContent = 'On Sale: ' + salePrice + ' Kr';
             salePriceElement.style.color = 'green';
@@ -88,6 +89,21 @@ const chosenMovieRating = () => {
         document.getElementById('allMovieInfo').appendChild(rating);
 }
 
+const button = () => {
+    let createButton = document.createElement('button');
+        createButton.classList = 'btn';
+        createButton.price = movieInfo.price;
+        createButton.textContent = createButton.price + ' Kr';
+        createButton.addEventListener('click', () => {
+            console.log('clicked');
+        })
+        document.getElementById('btnContainer').appendChild(createButton);
+}
+let clickedButtonLink = document.createElement('a');
+    clickedButtonLink.href = '/html/checkout.html';
+
+
+
 chosenMovie();
 chosenMovieTitle();
 chosenMovieDescription();
@@ -95,21 +111,5 @@ chosenMovieGenre();
 chosenMoviePrice();
 chosenMovieReleased();
 chosenMovieRating();
-
-
-const button = () => {
-    let createButton = document.createElement('button');
-        createButton.classList = 'btn';
-        createButton.price = movieInfo.price;
-        createButton.textContent = createButton.price + ' Kr';
-        createButton.addEventListener('click', () => {
-            localStorage.setItem('movie', JSON.stringify(movieInfo));
-        })
-        document.getElementById('btnContainer').appendChild(createButton);
-}
-let clickedButtonLink = document.createElement('a');
-    clickedButtonLink.href = '/html/checkout.html';
-    console.log(clickedButtonLink);
-
 button();
 
