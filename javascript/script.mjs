@@ -41,10 +41,14 @@ function createMovieHtml(movie) {
     
     let addToCartButton = document.createElement('button');
         addToCartButton.classList.add('fa-solid', 'fa-cart-shopping');
+
+    let favoriteButton = document.createElement('button');
+        favoriteButton.classList.add('fa-regular', 'fa-heart')
+        
     
         movieImgContainer.append(linkToMovieInfoPage, priceAndAddContainer);
         linkToMovieInfoPage.appendChild(movieImg);
-        priceAndAddContainer.append(moviePrice, addToCartButton);
+        priceAndAddContainer.append(moviePrice, favoriteButton, addToCartButton);
         movieContainer.appendChild(movieImgContainer);
 
     return movieContainer;

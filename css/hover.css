@@ -5,32 +5,16 @@
     transition: 0.3s ease;
 }
 
-.logo:hover, li:hover, .profileimg:hover, .footer-logo:hover {
+li:hover, 
+.logo:hover, 
+.profileimg:hover, 
+.footer-logo:hover,
+.fa-regular:hover,
+.fa-solid:hover,
+.btn:hover,
+.movieImgContainer:hover {
     transition: 0.3s ease;
     transform: scale(1.1);
     cursor: pointer;
 }
 
-
-/*--- heart icon ---*/
-
-.fa-regular:hover {
-    transition: 0.3 ease;
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-/*----- Blue buttons -----*/
-
-.btn:hover {
-    transition: 0.3 ease;
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-
-.movieImgContainer:hover {
-    transition: 0.3 ease;
-    transform: scale(1.1);
-    cursor: pointer;
-}
