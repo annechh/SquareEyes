@@ -1,10 +1,13 @@
-@import url(header.css);
 @import url(basic-styles.css);
-@import url(footer.css);
 @import url(genreSort.css);
-@import url(movieInfo.css);
 
+@import url(header.css);
+@import url(footer.css);
 @import url(hover.css);
+
+@import url(media-menu.css);
+@import url(media-footer.css);
+
 
 
 
