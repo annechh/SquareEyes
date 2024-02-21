@@ -5,6 +5,7 @@
 
 import { API_MOVIE_URL, fetchMovieAPI } from "./fetch.mjs";
 import { addGenreEventListener } from "./sortByGenre.mjs";
+import { createCart, addToCart } from "./cart.mjs";
 
 
 function createMovieHtml(movie) {
@@ -12,7 +13,7 @@ function createMovieHtml(movie) {
     // returns movie html
 
     let movieContainer = document.createElement('div');
-        movieContainer.classList.add('movieContainer');
+        movieContainer.classList.add('movieContainer');  
         
     let movieImgContainer = document.createElement('div');
         movieImgContainer.classList.add('movieImgContainer');
@@ -42,9 +43,10 @@ function createMovieHtml(movie) {
     let addToCartButton = document.createElement('button');
         addToCartButton.classList.add('fa-solid', 'fa-cart-shopping');
         addToCartButton.addEventListener('click', () => {
-            localStorage.setItem('movie', JSON.stringify(movie));
+            console.log('clicked cart', movie.id);
+            // localStorage.setItem('movie', JSON.stringify(movie));
+            createCart();
             addToCart(movie);
-            // console.log('clicked cart', movie.id);
         })
 
     let favoriteButton = document.createElement('button');
@@ -83,34 +85,8 @@ main();
 
 
 
-// cart, goes to a seperate mjs file for export
-function createCart() {
-    const cart = localStorage.getItem('cart');
-    // console.log('cart local storage',cart);
-    if (!cart) {
-        localStorage.setItem('cart', JSON.stringify([]))
-    } 
-}
 
-function addToCart(movie) {
-    console.log('add to cart:', movie);
-    const cart = JSON.parse(localStorage.getItem('cart'));
 
-    const movieIndex = cart.findIndex(currentMovie => {
-        console.log(currentMovie);
-        if (movie.id === currentMovie.id) {
-            return true;
-        }
-        return false;
-    })
 
-    if (movieIndex === -1) {
-        cart.push({...movie, quantity: 1});
-    } else {
-        cart[movieIndex].quantity ++;
-    }
-    console.log('movie index',movieIndex);
 
-        console.log('CART',cart);
-        localStorage.setItem('cart', JSON.stringify(cart));
-}
+

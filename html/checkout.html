@@ -30,7 +30,7 @@
                     <ul>
                         <li class="home"><a href="/SquareEyes/index.html">Home</a></li>
                         <!-- <li class="movies"><a href="/html/movies.html">Movies</a></li> -->
-                        <li class="shop-cart"><i class="fa-solid fa-cart-shopping"></i></li>
+                        <li class="shop-cart" id="cartIcon"><i class="fa-solid fa-cart-shopping"></i></li>
                         <!-- <li class="magglass"><i class="fa-solid fa-magnifying-glass"></i></li> -->
                     </ul>             
                 </nav>
@@ -42,21 +42,24 @@
     </header>
 
     <main>
+        <div class="h2box">
+            <h2>You are now ordering</h2>
+        </div>
         <section class="main-container">
-            <div class="h2box">
-                <h2>You are now ordering</h2>
-            </div>
             <section class="checkout-container">
-                <div class="img-container">
-                    <img src="/SquareEyes/images/Batman-square.png" alt=" Batman Movie">
+                <div class="cart-container" id="cartContainer">
+                    
                 </div>
-                <section class="order-container">
+                
+            </section>
+            <section class="order-container">
+                <div class="order-style">
                     <section class="titlebox">
                         <div class="title">
-                            <h3>Batman</h3>
+                    
                         </div> 
                         <div class="price">
-                            <h3>99 Kr</h3>
+                            
                         </div>
                     </section>
                     <!-- Payment method -->
@@ -86,11 +89,11 @@
                     <!-- Card information -->
                     <section class="info-container">
                         <form action="textfield">
-                            <input type="text" placeholder="Name" class="typefield" id="typefield" required>
-                            <input type="text" placeholder="Card number" class="typefield" id="typefield" required>
+                            <input type="text" placeholder="Name" class="typefield" id="nameField" required>
+                            <input type="text" placeholder="Card number" class="typefield" id="cardNumField" required>
                             <div class="exp-cvc-box">
-                                <input type="text" placeholder="Exp date" class="typefield" id="typefield" required>
-                                <input type="text" placeholder="CVC" class="typefield" id="typefield" required>
+                                <input type="text" placeholder="Exp date" class="typefield" id="expDateField" required>
+                                <input type="text" placeholder="CVC" class="typefield" id="cvcField" required>
                             </div>  
                         </form>
                     </section>
@@ -104,9 +107,8 @@
                             <a href="/html/movies.html">Cancel order, back to movies</a>
                         </div>
                     </section> 
-                </section>
+                </div>
             </section>
-        </section>
     
     </main>
 
