@@ -44,7 +44,6 @@ function createMovieHtml(movie) {
         addToCartButton.classList.add('fa-solid', 'fa-cart-shopping');
         addToCartButton.addEventListener('click', () => {
             console.log('clicked cart', movie.id);
-            // localStorage.setItem('movie', JSON.stringify(movie));
             createCart();
             addToCart(movie);
         })
