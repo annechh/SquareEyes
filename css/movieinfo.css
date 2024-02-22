@@ -114,7 +114,7 @@ h3 {
 .fa-regular {
     font-size: 40px;
     transition: 0.3 ease;
-    color: var(--footer);   
+    color: var(--white);   
 }
 
 .icon-container {

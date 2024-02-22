@@ -1,60 +1,127 @@
 
 
-function createHtmlForMovie(movie) {
-    const cartListMovies = document.createElement('div');
+function createHtmlForMovie(movie, movieId) {
+    let cartListMovies = document.createElement('div');
         cartListMovies.classList.add('cart-list');
+        cartListMovies.setAttribute('movie-id', movie.id)
 
-    const imgStyleContainer = document.createElement('div');
+    let imgStyleContainer = document.createElement('div');
         imgStyleContainer.classList.add('imgStyleContainer');
 
-    const infoStyleContainer = document.createElement('div');
+    let infoStyleContainer = document.createElement('div');
         infoStyleContainer.classList.add('infoStyleContainer');
 
-    const movieImgInCart = document.createElement('img');
+    let movieImgInCart = document.createElement('img');
         movieImgInCart.src = movie.image.url;
         movieImgInCart.classList.add('img-in-cart');
 
-    const movieInCart = document.createElement('div');
+    let movieInCart = document.createElement('div');
         movieInCart.classList.add('movie-in-cart');
 
-    const movieTitle = document.createElement('div');
+    let movieTitle = document.createElement('div');
         movieTitle.textContent = movie.title;
         movieTitle.classList.add('cartTitle');
 
-    const movieQuantity = document.createElement('div');
-        movieQuantity.textContent = movie.quantity;
+    let movieQuantity = document.createElement('div');
+        movieQuantity.textContent = `Quantity: ${movie.quantity}`;
         movieQuantity.classList.add('cartInfo');
 
-    const moviePrice = document.createElement('div');
-        moviePrice.textContent = movie.price;
+    let moviePrice = document.createElement('div');
+        moviePrice.textContent = `Price: ${movie.price}`;
         moviePrice.classList.add('cartInfo');
 
-    const totalPriceMovie = document.createElement('div');
-        totalPriceMovie.textContent = movie.price * movie.quantity;
-        totalPriceMovie.classList.add('cartInfo');
+    let movieSalePrice = document.createElement('div');
+        movieSalePrice.textContent = `On Sale: ${movie.discountedPrice}`;
+        moviePrice.classList.add('cartInfo');
+
+    let removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.addEventListener('click', removeMovieFromCart);
 
         cartListMovies.append(imgStyleContainer, infoStyleContainer);
         imgStyleContainer.appendChild(movieImgInCart);
-        infoStyleContainer.append(movieInCart, movieTitle, movieQuantity, moviePrice, totalPriceMovie);
-    return cartListMovies;
+        infoStyleContainer.append(movieInCart, movieTitle, moviePrice, movieSalePrice, movieQuantity, removeButton);
+        return cartListMovies;
 }
 
-function displayCartMovies(){
-    const displayCartContainer = document.getElementById('cartContainer');
-    const cart = JSON.parse(localStorage.getItem('cart'));
+
+
+function removeFromCartByMovieId(movieId) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const movieIndex = cart.findIndex((movie) => movie.id === movieId);
+
+    if (movieIndex >= 0 && movieIndex < cart.length) {
+        cart.splice(movieIndex, 1); 
+        localStorage.setItem('cart', JSON.stringify(cart)); 
+    } else {
+        console.error('Invalid index:', movieId);
+    }
+}
+
+function removeMovieFromCart(event) {
+    let buttonClicked = event.target;
+    let movieId = buttonClicked.parentElement.parentElement.getAttribute('movie-id');
+    
+    removeFromCartByMovieId(movieId);
+
+    buttonClicked.parentElement.parentElement.remove();
+}
+
+
+
+
+let totalPrice = 0;
+function displayTotalPrice(movie) {
+    
+    movie.forEach(movie => {
+        totalPrice += movie.price * movie.quantity;
+    });
+    
+    let displayTotalPrice = document.getElementById ('totalPriceCheckout');
+        displayTotalPrice.textContent = `Total Price: ${totalPrice}`;
+}
+
+
+
+
+function purchaseButtonHtml() {
+    let buyButton = document.getElementById('buyButton');
+        buyButton.classList.add('btn');
+
+        buyButton.addEventListener('click', () => {
+            let moviesInCart = document.getElementById('cartContainer');
+                moviesInCart.innerHTML = '';
+            let clearPrice = document.getElementById('totalPriceCheckout');
+                clearPrice.textContent = '';
+
+            localStorage.removeItem('cart')
+            alert('Thank you for your purchase')
+        });
+}
+
+
+
+
+function displayCartMovies() {
+    let displayCartContainer = document.getElementById('cartContainer');
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    
+    purchaseButtonHtml();
+    displayTotalPrice(cart);
 
     cart.forEach((currentMovie) => {
-        const movieHtml = createHtmlForMovie(currentMovie)
+        let movieHtml = createHtmlForMovie(currentMovie);
         displayCartContainer.appendChild(movieHtml);
+        
+        
     })
 }
 
 
+
 function mainCart() {
-    displayCartMovies();
+    displayCartMovies();  
 }
 
 mainCart();
-
-
-

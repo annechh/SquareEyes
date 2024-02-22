@@ -1,9 +1,11 @@
 
-let movieInfo = JSON.parse(localStorage.getItem('movie'));
+import { createCart, addToCart } from "./cart.mjs";
+
+let movie = JSON.parse(localStorage.getItem('movie'));
 
 
 const chosenMovie = () => {
-    let movieImageUrl = movieInfo.image.url;
+    let movieImageUrl = movie.image.url;
     
     let movieImageElement = document.createElement('img');
     movieImageElement.classList = 'imgTest';
@@ -13,7 +15,7 @@ const chosenMovie = () => {
 }
 
 const chosenMovieTitle = () => {
-    let movieTitle = movieInfo.title;
+    let movieTitle = movie.title;
     
     let title = document.createElement('h2');
         title.classList = 'movieTitle';
@@ -23,7 +25,7 @@ const chosenMovieTitle = () => {
 }
 
 const chosenMovieDescription = () => {
-    let movieDescription = movieInfo.description;
+    let movieDescription = movie.description;
     
     let description = document.createElement('h3');
         description.classList = 'movieDescription'
@@ -33,7 +35,7 @@ const chosenMovieDescription = () => {
 }
 
 const chosenMovieGenre = () => {
-    let movieGenre = movieInfo.genre;
+    let movieGenre = movie.genre;
     
     let genre = document.createElement('h3');
         genre.classList = 'movieGenre';
@@ -43,9 +45,9 @@ const chosenMovieGenre = () => {
 }
 
 const chosenMoviePrice = () => {
-    let moviePrice = movieInfo.price;
-    let movieDiscountedPrice = movieInfo.discountedPrice;
-    let movieOnSale = movieInfo.onSale;
+    let moviePrice = movie.price;
+    let movieDiscountedPrice = movie.discountedPrice;
+    let movieOnSale = movie.onSale;
         
     
     let price = document.createElement('div');
@@ -70,7 +72,7 @@ const chosenMoviePrice = () => {
 }
 
 const chosenMovieReleased = () => {
-    let movieReleased = movieInfo.released;
+    let movieReleased = movie.released;
     
     let released = document.createElement('h3');
         released.classList = 'movieReleased';
@@ -80,7 +82,7 @@ const chosenMovieReleased = () => {
 }
 
 const chosenMovieRating = () => {
-    let movieRatings = movieInfo.rating;
+    let movieRatings = movie.rating;
     
     let rating = document.createElement('h3');
         rating.classList = 'movieRatings';
@@ -92,15 +94,15 @@ const chosenMovieRating = () => {
 const button = () => {
     let createButton = document.createElement('button');
         createButton.classList = 'btn';
-        createButton.price = movieInfo.price;
+        createButton.price = movie.price;
         createButton.textContent = createButton.price + ' Kr';
         createButton.addEventListener('click', () => {
             console.log('clicked');
+            addToCart(movie);
         })
         document.getElementById('btnContainer').appendChild(createButton);
 }
-let clickedButtonLink = document.createElement('a');
-    clickedButtonLink.href = '/html/checkout.html';
+
 
 
 
@@ -112,4 +114,4 @@ chosenMoviePrice();
 chosenMovieReleased();
 chosenMovieRating();
 button();
-
+createCart();
