@@ -1,17 +1,11 @@
-// 1. Get the data
-// 2. Loop trough the data
-// 3. Create HTML
-// 4. Append the HTML to the document
 
 import { API_MOVIE_URL, fetchMovieAPI } from "./fetch.mjs";
 import { addGenreEventListener } from "./sortByGenre.mjs";
 import { createCart, addToCart } from "./cart.mjs";
 
 
-function createMovieHtml(movie) {
-    // console.log(movie);
-    // returns movie html
 
+function createMovieHtml(movie) {
     let movieContainer = document.createElement('div');
         movieContainer.classList.add('movieContainer');  
         
@@ -32,8 +26,6 @@ function createMovieHtml(movie) {
         linkToMovieInfoPage.href = 'html/movieinfo.html';
         linkToMovieInfoPage.classList.add('movie');
 
-        // console.log(linkToMovieInfoPage);
-
     let priceAndAddContainer = document.createElement('div');
         priceAndAddContainer.classList.add('priceCartItems');
     
@@ -50,7 +42,6 @@ function createMovieHtml(movie) {
 
     let favoriteButton = document.createElement('button');
         favoriteButton.classList.add('fa-regular', 'fa-heart')
-        
     
         movieImgContainer.append(linkToMovieInfoPage, priceAndAddContainer);
         linkToMovieInfoPage.appendChild(movieImg);
@@ -65,13 +56,9 @@ function createMovieHtml(movie) {
 export function displayMovies(movies) {
     let displayMovieWrapper = document.getElementById('movieWrapper');
         displayMovieWrapper.innerHTML = '';
-    // console.log(movies);
     movies.forEach((movieList) => {
-        // generates movie html 
         let movieHtml = createMovieHtml(movieList);
-        // console.log(movieHtml);
         displayMovieWrapper.appendChild(movieHtml);
-        // createAddToCartButton(movies)
     })
     
 }

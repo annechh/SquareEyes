@@ -1,4 +1,4 @@
-import { removeMovieFromCart, clearCart } from "./cart.mjs";
+import { removeMovieFromCart, clearCart, resetCartsHtml, getCart} from "./cart.mjs";
 
 
 let clearCartButton = document.getElementById('clearCart');
@@ -35,14 +35,21 @@ function createHtmlForMovie(movie) {
     let moviePrice = document.createElement('div');
         moviePrice.textContent = `Price: ${movie.price}`;
         moviePrice.classList.add('cartInfo');
+        if (movie.onSale) {
+            moviePrice.style.textDecoration = 'line-through';
+        }
 
     let movieSalePrice = document.createElement('div');
         movieSalePrice.textContent = `On Sale: ${movie.discountedPrice}`;
         movieSalePrice.classList.add('cartInfo');
+        movieSalePrice.style.color = 'green';
+        if (!movie.onSale) {
+            movieSalePrice.textContent = '';
+        } 
 
     let removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
-        removeButton.addEventListener('click', removeMovieFromCart);
+        removeButton.addEventListener('click',removeMovieFromCart);
 
         cartListMovies.append(imgContainer, infoContainer);
         imgContainer.appendChild(movieImgInCart);
@@ -59,36 +66,33 @@ function createHtmlForMovie(movie) {
 
 
 let totalPrice = 0;
-function displayTotalPrice(movie) {
+export function displayTotalPrice(movie) {
     
     movie.forEach(movie => {
         totalPrice += movie.price * movie.quantity;
     });
-
+    
     let formattedTotalPrice = formatCurrency(totalPrice);
     
     let displayTotalPrice = document.getElementById ('totalPriceCheckout');
-        displayTotalPrice.textContent = `Total Price: ${formattedTotalPrice}`;
+    displayTotalPrice.textContent = `Total Price: ${formattedTotalPrice}`;
+    
 }
 
 
-// gives two numbers of decimals
 function formatCurrency(total) {
     return Math.round(total * 100) / 100;
 }
 
 
 
+
 function purchaseButtonHtml() {
     let buyButton = document.getElementById('buyButton');
         buyButton.classList.add('btn');
-
         buyButton.addEventListener('click', () => {
-            let moviesInCart = document.getElementById('cartContainer');
-                moviesInCart.innerHTML = '';
-            let clearPrice = document.getElementById('totalPriceCheckout');
-                clearPrice.textContent = '';
-
+            
+            resetCartsHtml();
             localStorage.removeItem('cart')
             alert('Thank you for your purchase')
         });
@@ -100,7 +104,7 @@ function purchaseButtonHtml() {
 function displayCartMovies() {
     let displayCartContainer = document.getElementById('cartContainer');
         // displayCartContainer.textContent = '';
-    let cart = JSON.parse(localStorage.getItem('cart'));
+    let cart = getCart();
     
     purchaseButtonHtml();
     displayTotalPrice(cart);

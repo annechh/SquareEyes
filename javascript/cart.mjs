@@ -1,6 +1,6 @@
-// import { displayCartMovies } from "./checkout.mjs";
+// import { displayTotalPrice } from "./checkout.mjs";
 
-function getCart() {
+export function getCart() {
     const cart = JSON.parse(localStorage.getItem('cart'));
     return cart;
 }
@@ -16,14 +16,24 @@ export function createCart() {
 
 
 export function clearCart() {
-    localStorage.setItem('cart', JSON.stringify([]))
-    console.log('cart is cleared');
+    const confirmedClear = window.confirm('Do you want to clear your cart?')
+    
+    if (confirmedClear) {
+        localStorage.setItem('cart', JSON.stringify([]))
+        console.log('cart is cleared');
+        resetCartsHtml();
+    } 
+}
+
+export function resetCartsHtml() {
+    let moviesInCart = document.getElementById('cartContainer');
+        moviesInCart.innerHTML = '';
+    let clearPrice = document.getElementById('totalPriceCheckout');
+        clearPrice.textContent = 'Total Price: ' + 0;
 }
 
 
-
 export function addToCart(movie) {
-    // const cart = JSON.parse(localStorage.getItem('cart'));
     const cart = getCart();
 
     const movieIndex = cart.findIndex(currentMovie => {
@@ -39,13 +49,8 @@ export function addToCart(movie) {
     } else {
         cart[movieIndex].quantity += 1;
     }
-    console.log('movie index',movieIndex);
-
-        console.log('CART',cart);
         localStorage.setItem('cart', JSON.stringify(cart));
 }
-
-
 
 
 
@@ -57,12 +62,9 @@ function removeFromCartByMovieId(movieId) {
     if (movieIndex >= 0 && movieIndex < cart.length) {
         cart.splice(movieIndex, 1); 
         localStorage.setItem('cart', JSON.stringify(cart)); 
-    } else {
-        console.error('Invalid index:', movieId);
-    }
+    } 
+    
 }
-
-
 
 export function removeMovieFromCart(event) {
     let buttonClicked = event.target;
@@ -70,9 +72,51 @@ export function removeMovieFromCart(event) {
     
     removeFromCartByMovieId(movieId);
     
-
     buttonClicked.parentElement.parentElement.remove();
+
+    // let updateCart = getCart();
+    // updateTotalCartPrice(updateCart);
+    displayCartMovies();
+    
+    
 }
 
+// export function updateTotalCartPrice(cart) {
+//     let totalPrice = 0;
+
+//     function reducePrice(cartTotal, movie) {
+//         let moviePrice = movie.price - movie.discountedPrice;
+//             if (moviePrice > 0) {
+//                 return cartTotal + movie.discountedPrice;
+//             } else {
+//                 return cartTotal + movie.price;
+//             }
+//     }
+//     let updateCart = cart.reduce(reducePrice, totalPrice);
+//         updateCart = document.getElementById('totalPriceCheckout');
+// }
 
 
+
+
+// const updateCartTotal = (cart) => {
+//     let initialValue = 0; 
+
+//  // here it checks if its the discount price or reg price and returns the price.
+//     const reduceFunction = (cartTotal, game) => {
+//         let discount = game.price - game.discountedPrice
+//         if (discount > 0){
+//             return cartTotal + game.discountedPrice
+//         }else {
+//             return cartTotal + game.price
+//         }
+
+//     }
+//     //updatedCartTotal take the return value from reducefuntion and adds it with the initialvalue
+//     let updatedCartTotal = cart.reduce(reduceFunction, initialValue) 
+
+//     let inputCartTotal = document.getElementById("cartTotal")
+//     inputCartTotal.innerText = "$" + Math.round(updatedCartTotal *100)/100 //makes the number not go to the moon in decimals
+
+
+// }

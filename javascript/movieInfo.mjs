@@ -72,18 +72,7 @@ const chosenMoviePrice = () => {
         document.getElementById('allMovieInfo').appendChild(price);
 }
 
-// export function originalMoviePrice() {
-//     let movieOriginalPrice = originalPrice.textContent = 'Price: ' + moviePrice + ' Kr';
-//         if (movieOnSale) {
-//             originalPrice.style.textDecoration = 'line-through';
-//         }
-//         if (movieOnSale) {
-//             let salePrice = movieDiscountedPrice;
-//             let salePriceElement = document.createElement('h3');
-//             salePriceElement.textContent = 'On Sale: ' + salePrice + ' Kr';
-//             salePriceElement.style.color = 'green';
-//         }
-// }
+
 
 const chosenMovieReleased = () => {
     let movieReleased = movie.released;
