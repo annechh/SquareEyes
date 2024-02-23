@@ -60,17 +60,7 @@ function createMovieHtml(movie) {
     return movieContainer;
 }
 
-// export function createAddToCartButton(movie) {
-//     let addToCartButton = document.createElement('button');
-//         addToCartButton.classList.add('fa-solid', 'fa-cart-shopping');
-//         addToCartButton.addEventListener('click', () => {
-//             console.log('clicked cart', movie.id);
-//             createCart();
-//             addToCart(movie);
-//         })
 
-//         return addToCartButton;
-// }
 
 export function displayMovies(movies) {
     let displayMovieWrapper = document.getElementById('movieWrapper');

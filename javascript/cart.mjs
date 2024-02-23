@@ -1,4 +1,11 @@
-// cart, goes to a seperate mjs file for export
+// import { displayCartMovies } from "./checkout.mjs";
+
+function getCart() {
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    return cart;
+}
+
+
 export function createCart() {
     const cart = localStorage.getItem('cart');
     // console.log('cart local storage',cart);
@@ -7,8 +14,17 @@ export function createCart() {
     } 
 }
 
+
+export function clearCart() {
+    localStorage.setItem('cart', JSON.stringify([]))
+    console.log('cart is cleared');
+}
+
+
+
 export function addToCart(movie) {
-    const cart = JSON.parse(localStorage.getItem('cart'));
+    // const cart = JSON.parse(localStorage.getItem('cart'));
+    const cart = getCart();
 
     const movieIndex = cart.findIndex(currentMovie => {
         console.log('current movie',currentMovie);
@@ -28,3 +44,35 @@ export function addToCart(movie) {
         console.log('CART',cart);
         localStorage.setItem('cart', JSON.stringify(cart));
 }
+
+
+
+
+
+function removeFromCartByMovieId(movieId) {
+    const cart = getCart();
+
+    const movieIndex = cart.findIndex((movie) => movie.id === movieId);
+    
+    if (movieIndex >= 0 && movieIndex < cart.length) {
+        cart.splice(movieIndex, 1); 
+        localStorage.setItem('cart', JSON.stringify(cart)); 
+    } else {
+        console.error('Invalid index:', movieId);
+    }
+}
+
+
+
+export function removeMovieFromCart(event) {
+    let buttonClicked = event.target;
+    let movieId = buttonClicked.parentElement.parentElement.getAttribute('movie-id');
+    
+    removeFromCartByMovieId(movieId);
+    
+
+    buttonClicked.parentElement.parentElement.remove();
+}
+
+
+
