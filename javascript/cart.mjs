@@ -1,5 +1,6 @@
 // import { displayTotalPrice } from "./checkout.mjs";
 
+
 export function getCart() {
     const cart = JSON.parse(localStorage.getItem('cart'));
     return cart;
@@ -49,14 +50,15 @@ export function addToCart(movie) {
     } else {
         cart[movieIndex].quantity += 1;
     }
-        localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 
 
 function removeFromCartByMovieId(movieId) {
+    console.log("Removing movie with ID:", movieId);
     const cart = getCart();
-
+    
     const movieIndex = cart.findIndex((movie) => movie.id === movieId);
     
     if (movieIndex >= 0 && movieIndex < cart.length) {
@@ -67,19 +69,21 @@ function removeFromCartByMovieId(movieId) {
 }
 
 export function removeMovieFromCart(event) {
+    // const cart1 = JSON.parse(localStorage.getItem('cart'));
     let buttonClicked = event.target;
     let movieId = buttonClicked.parentElement.parentElement.getAttribute('movie-id');
     
     removeFromCartByMovieId(movieId);
-    
+    console.log("Remove button clicked", movieId);
     buttonClicked.parentElement.parentElement.remove();
+    
+    // displayCartMovies();
+    // updateTotalCartPrice(cart1);
+    // displayTotalPrice(cart)
 
-    // let updateCart = getCart();
-    // updateTotalCartPrice(updateCart);
-    displayCartMovies();
-    
-    
 }
+
+
 
 // export function updateTotalCartPrice(cart) {
 //     let totalPrice = 0;
@@ -92,31 +96,9 @@ export function removeMovieFromCart(event) {
 //                 return cartTotal + movie.price;
 //             }
 //     }
-//     let updateCart = cart.reduce(reducePrice, totalPrice);
-//         updateCart = document.getElementById('totalPriceCheckout');
+//     let updatedCartTotal = cart.reduce(reducePrice, totalPrice);
+//         let updateCart = document.getElementById('totalPriceCheckout');
+//         updateCart.textContent = "Total price: " + Math.round(updatedCartTotal *100)/100
 // }
 
 
-
-
-// const updateCartTotal = (cart) => {
-//     let initialValue = 0; 
-
-//  // here it checks if its the discount price or reg price and returns the price.
-//     const reduceFunction = (cartTotal, game) => {
-//         let discount = game.price - game.discountedPrice
-//         if (discount > 0){
-//             return cartTotal + game.discountedPrice
-//         }else {
-//             return cartTotal + game.price
-//         }
-
-//     }
-//     //updatedCartTotal take the return value from reducefuntion and adds it with the initialvalue
-//     let updatedCartTotal = cart.reduce(reduceFunction, initialValue) 
-
-//     let inputCartTotal = document.getElementById("cartTotal")
-//     inputCartTotal.innerText = "$" + Math.round(updatedCartTotal *100)/100 //makes the number not go to the moon in decimals
-
-
-// }

@@ -32,7 +32,7 @@ function hideLoader() {
 // - As a user, I want to view a single product page with more detail. 👌
 // - As a user, I want to add a product to my basket. 👌
 // - As a user, I want to remove a product from my basket.👌
-// - As a user, I want to view a summary of my cart on the checkout page. TOTAL PRIS update !
+// - As a user, I want to view a summary of my cart on the checkout page. 
 // - As a user, I want to view an order-confirmation screen after checking out.👌
-
-// Create Loading
+// TOTAL PRICE update when removing a movie 
+// Create Loading👌

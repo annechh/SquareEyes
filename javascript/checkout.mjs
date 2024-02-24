@@ -1,6 +1,8 @@
 import { removeMovieFromCart, clearCart, resetCartsHtml, getCart} from "./cart.mjs";
 
-
+// 1. ClearCartButton throwing error when calling displayCartMovies(); in removeMovieFromCart
+//    ..when removing items from cart and want to go back to main page, new 
+//    ..error happens next
 let clearCartButton = document.getElementById('clearCart');
     clearCartButton.addEventListener('click', () => {
         clearCart();
@@ -46,11 +48,12 @@ function createHtmlForMovie(movie) {
         if (!movie.onSale) {
             movieSalePrice.textContent = '';
         } 
-
-    let removeButton = document.createElement('button');
+        
+        let removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
         removeButton.addEventListener('click',removeMovieFromCart);
-
+        console.log("Remove button",removeButton);
+        
         cartListMovies.append(imgContainer, infoContainer);
         imgContainer.appendChild(movieImgInCart);
         infoContainer.append(
@@ -65,19 +68,34 @@ function createHtmlForMovie(movie) {
 
 
 
-let totalPrice = 0;
-export function displayTotalPrice(movie) {
+// let totalPrice = 0;
+// export function displayTotalPrice(movie) {
     
-    movie.forEach(movie => {
-        totalPrice += movie.price * movie.quantity;
-    });
+//     movie.forEach(movie => {
+//         totalPrice += movie.price * movie.quantity;
+//     });
     
+
+
+//     let formattedTotalPrice = formatCurrency(totalPrice);
+//     let displayTotalPrice = document.getElementById ('totalPriceCheckout');
+//     displayTotalPrice.textContent = `Total Price: ${formattedTotalPrice}`;
+    
+// }
+
+
+export function displayTotalPrice(cart) {
+    let totalPrice = cart.reduce((acc, movie) => acc + movie.price * movie.quantity, 0);
+
     let formattedTotalPrice = formatCurrency(totalPrice);
-    
-    let displayTotalPrice = document.getElementById ('totalPriceCheckout');
-    displayTotalPrice.textContent = `Total Price: ${formattedTotalPrice}`;
+    let displayTotalPrice = document.getElementById('totalPriceCheckout');
+    displayTotalPrice.textContent = `Total Price: ${formattedTotalPrice}`; // 3 then this with error
     
 }
+
+
+// After the 3rd error, its clear, but when i try to access 
+// ...movieinfo page, i get a new error
 
 
 function formatCurrency(total) {
@@ -86,7 +104,7 @@ function formatCurrency(total) {
 
 
 
-
+// 2 Then this throws error
 function purchaseButtonHtml() {
     let buyButton = document.getElementById('buyButton');
         buyButton.classList.add('btn');
@@ -101,13 +119,13 @@ function purchaseButtonHtml() {
 
 
 
-function displayCartMovies() {
+export function displayCartMovies() {
     let displayCartContainer = document.getElementById('cartContainer');
-        // displayCartContainer.textContent = '';
+        displayCartContainer.innerHTML = '';
     let cart = getCart();
     
-    purchaseButtonHtml();
-    displayTotalPrice(cart);
+    purchaseButtonHtml(); // 2 then this throws an error
+    displayTotalPrice(cart); 
 
     cart.forEach((currentMovie) => {
         let movieHtml = createHtmlForMovie(currentMovie);

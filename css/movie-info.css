@@ -98,15 +98,15 @@ h3 {
 }
 
 .btn {
-    width: 400px;
-    height: 80px;
+    width: 300px;
+    height: 70px;
     background-image: 
     linear-gradient(to bottom, #072531, #106B8D, #106B8D, #072531);
     color: var(--white);
     border-radius: 50px;
     border: none;
     outline: 2px solid var(--whitefaded);
-    font-size: 40px;
+    font-size: 30px;
     cursor: pointer;
     transition: 0.3s ease;
 }
