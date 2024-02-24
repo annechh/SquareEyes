@@ -69,36 +69,41 @@ function removeFromCartByMovieId(movieId) {
 }
 
 export function removeMovieFromCart(event) {
-    // const cart1 = JSON.parse(localStorage.getItem('cart'));
+    const cart1 = JSON.parse(localStorage.getItem('cart'));
     let buttonClicked = event.target;
     let movieId = buttonClicked.parentElement.parentElement.getAttribute('movie-id');
     
     removeFromCartByMovieId(movieId);
     console.log("Remove button clicked", movieId);
     buttonClicked.parentElement.parentElement.remove();
-    
-    // displayCartMovies();
-    // updateTotalCartPrice(cart1);
-    // displayTotalPrice(cart)
 
+    
+    updateTotalCartPrice(cart1);
 }
 
 
 
-// export function updateTotalCartPrice(cart) {
-//     let totalPrice = 0;
+export function updateTotalCartPrice(cart) {
+    getCart()
+    let totalPrice = 0;
 
-//     function reducePrice(cartTotal, movie) {
-//         let moviePrice = movie.price - movie.discountedPrice;
-//             if (moviePrice > 0) {
+    function reducePrice(cartTotal, movie) {
+        let moviePrice = movie.price - movie.discountedPrice;
+            if (moviePrice > 0) {
+                return cartTotal + movie.discountedPrice
+            } else {
+                return cartTotal + movie.price;
+            }
+            
+    }
+    let updatedCartTotal = cart.reduce(reducePrice, totalPrice);
+        let updateCart = document.getElementById('totalPriceCheckout');
+        updateCart.textContent = "Total price: " + Math.round(updatedCartTotal *100)/100
+}
+
+
+// if (moviePrice > 0) {
 //                 return cartTotal + movie.discountedPrice;
 //             } else {
 //                 return cartTotal + movie.price;
 //             }
-//     }
-//     let updatedCartTotal = cart.reduce(reducePrice, totalPrice);
-//         let updateCart = document.getElementById('totalPriceCheckout');
-//         updateCart.textContent = "Total price: " + Math.round(updatedCartTotal *100)/100
-// }
-
-

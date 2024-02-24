@@ -41,23 +41,25 @@
 
     <main>
         <div class="loader" id="loader" style="display: none;"></div>
+        
+        <section class="sortGenreContainer">
+            <details class="sort sortByGenre" id="sortByGenre">
+                <summary>Genre</summary>
+                <ul id="genreList">
+                    <li>Show All</li>
+                    <li>Action</li>
+                    <li>Comedy</li>
+                    <li>Drama</li>
+                    <li>Horror</li>
+                    <li>Kids</li>
+                </ul>
+            </details>
+        </section> 
 
         <div class="widthStyleMainContent">
-            <section class="sortGenreContainer">
-                <details class="sort sortByGenre" id="sortByGenre">
-                    <summary>Genre</summary>
-                    <ul id="genreList">
-                        <li>Show All</li>
-                        <li>Action</li>
-                        <li>Comedy</li>
-                        <li>Drama</li>
-                        <li>Horror</li>
-                        <li>Kids</li>
-                    </ul>
-                </details>
-            </section> 
-            
-            <section class="movieWrapper" id="movieWrapper"></section>
+            <!-- <section class="wrapperStyle"> -->
+                <div class="movieWrapper" id="movieWrapper"></div>
+            <!-- </section> -->
         </div>
         <div id="cartContainer"></div>
     </main>

@@ -97,6 +97,12 @@ h3 {
     padding-top: 70px;
 }
 
+.btn-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
 .btn {
     width: 300px;
     height: 70px;
@@ -111,7 +117,7 @@ h3 {
     transition: 0.3s ease;
 }
 
-.fa-regular {
+.fa-regular, .fa-solid {
     font-size: 40px;
     transition: 0.3 ease;
     color: var(--white);   

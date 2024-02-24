@@ -1,4 +1,4 @@
-import { removeMovieFromCart, clearCart, resetCartsHtml, getCart} from "./cart.mjs";
+import { removeMovieFromCart, clearCart, resetCartsHtml, getCart, updateTotalCartPrice} from "./cart.mjs";
 
 // 1. ClearCartButton throwing error when calling displayCartMovies(); in removeMovieFromCart
 //    ..when removing items from cart and want to go back to main page, new 
@@ -51,7 +51,10 @@ function createHtmlForMovie(movie) {
         
         let removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
-        removeButton.addEventListener('click',removeMovieFromCart);
+        removeButton.addEventListener('click', (event) => {
+            removeMovieFromCart(event);
+            updateTotalCartPrice(getCart())
+        });
         console.log("Remove button",removeButton);
         
         cartListMovies.append(imgContainer, infoContainer);
@@ -68,31 +71,30 @@ function createHtmlForMovie(movie) {
 
 
 
-// let totalPrice = 0;
-// export function displayTotalPrice(movie) {
+let totalPrice = 0;
+export function displayTotalPrice(movie) {
     
-//     movie.forEach(movie => {
-//         totalPrice += movie.price * movie.quantity;
-//     });
+    movie.forEach(movie => {
+        totalPrice += movie.price * movie.quantity;
+    });
     
 
-
-//     let formattedTotalPrice = formatCurrency(totalPrice);
-//     let displayTotalPrice = document.getElementById ('totalPriceCheckout');
-//     displayTotalPrice.textContent = `Total Price: ${formattedTotalPrice}`;
-    
-// }
-
-
-export function displayTotalPrice(cart) {
-    let totalPrice = cart.reduce((acc, movie) => acc + movie.price * movie.quantity, 0);
 
     let formattedTotalPrice = formatCurrency(totalPrice);
-    let displayTotalPrice = document.getElementById('totalPriceCheckout');
-    displayTotalPrice.textContent = `Total Price: ${formattedTotalPrice}`; // 3 then this with error
+    let displayTotalPrice = document.getElementById ('totalPriceCheckout');
+    displayTotalPrice.textContent = `Total Price: ${formattedTotalPrice}`;
     
 }
 
+
+// export function displayTotalPrice(cart) {
+//     let totalPrice = cart.reduce((acc, movie) => acc + movie.price * movie.quantity, 0);
+
+//     let formattedTotalPrice = formatCurrency(totalPrice);
+//     let displayTotalPrice = document.getElementById('totalPriceCheckout');
+//     displayTotalPrice.textContent = `Total Price Kr: ${formattedTotalPrice}`; // 3 then this with error
+    
+// }        
 
 // After the 3rd error, its clear, but when i try to access 
 // ...movieinfo page, i get a new error

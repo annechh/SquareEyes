@@ -42,6 +42,14 @@ function createMovieHtml(movie) {
 
     let favoriteButton = document.createElement('button');
         favoriteButton.classList.add('fa-regular', 'fa-heart')
+        if (movie.favorite) {
+            favoriteButton.classList.remove('fa-regular');
+            favoriteButton.classList.add('fa-solid', 'fa-heart');
+            favoriteButton.style.color = 'red';
+        } else {
+            favoriteButton.classList.remove('fa-solid', 'fa-heart');
+            favoriteButton.classList.add('fa-regular', 'fa-heart');
+        }
     
         movieImgContainer.append(linkToMovieInfoPage, priceAndAddContainer);
         linkToMovieInfoPage.appendChild(movieImg);
