@@ -13,8 +13,8 @@ function createHtmlForMovie(movie) {
         cartListMovies.classList.add('cart-list');
         cartListMovies.setAttribute('movie-id', movie.id)
 
-    let imgContainer = document.createElement('div');
-        imgContainer.classList.add('imgStyleContainer');
+    // let imgContainer = document.createElement('div');
+    //     imgContainer.classList.add('imgStyleContainer');
 
     let infoContainer = document.createElement('div');
         infoContainer.classList.add('infoStyleContainer');
@@ -22,6 +22,14 @@ function createHtmlForMovie(movie) {
     let movieImgInCart = document.createElement('img');
         movieImgInCart.src = movie.image.url;
         movieImgInCart.classList.add('img-in-cart');
+
+    let linkToMovieInfoPage = document.createElement('a');
+    linkToMovieInfoPage.classList.add('movie', 'imgStyleContainer');
+    linkToMovieInfoPage.href = '/SquareEyes/html/movieinfo.html';
+    linkToMovieInfoPage.addEventListener('click', () => {
+        localStorage.setItem('movie', JSON.stringify(movie));
+    })
+        
 
     let movieInCart = document.createElement('div');
         movieInCart.classList.add('movie-in-cart');
@@ -57,8 +65,8 @@ function createHtmlForMovie(movie) {
         });
         console.log("Remove button",removeButton);
         
-        cartListMovies.append(imgContainer, infoContainer);
-        imgContainer.appendChild(movieImgInCart);
+        cartListMovies.append(linkToMovieInfoPage, infoContainer);
+        linkToMovieInfoPage.appendChild(movieImgInCart);
         infoContainer.append(
             movieInCart, 
             movieTitle, 

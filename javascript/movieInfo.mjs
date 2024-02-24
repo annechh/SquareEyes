@@ -8,11 +8,13 @@ const chosenMovie = () => {
     let movieImageUrl = movie.image.url;
     
     let movieImageElement = document.createElement('img');
-    movieImageElement.classList.add('imgTest');
-    movieImageElement.src = movieImageUrl;
+        movieImageElement.classList.add('imgTest');
+        movieImageElement.src = movieImageUrl;
     
     document.getElementById('movieImgContainer').appendChild(movieImageElement);
 }
+
+
 
 const chosenMovieTitle = () => {
     let movieTitle = movie.title;
