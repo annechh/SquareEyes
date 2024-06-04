@@ -9,9 +9,6 @@ Built with
 ---
 - HTML
 - CSS
-- 
-Contact
----
 
 
 Link to Square Eyes webpage
