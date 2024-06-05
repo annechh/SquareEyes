@@ -6,8 +6,8 @@
 Description
 ---
 
+SquareEyes was my first assignment using HTML and CSS.
 
-Learn how to put my design in to coding using HTML and CSS
 
 Built with
 ---
@@ -25,3 +25,8 @@ Contact
 Link to Square Eyes webpage
 ---
 https://annechh.github.io/SquareEyes/
+
+Acknowledgments
+---
+
+All images are borrowed from IMDB
