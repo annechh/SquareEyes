@@ -1,4 +1,6 @@
-![logo](https://github.com/annechh/SquareEyes/assets/142426482/5365d670-b54f-4125-b538-678bd928a59e)
+![image](https://github.com/annechh/SquareEyes/assets/142426482/435ec8e9-33df-4c3a-a63e-55bb335c4aeb)
+
+
 
 Square Eyes - HTML & CSS CA 
 ---
