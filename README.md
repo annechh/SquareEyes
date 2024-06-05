@@ -6,8 +6,10 @@ Square Eyes - HTML & CSS CA
 Description
 ---
 
-SquareEyes was my first assignment using HTML and CSS.
+SquareEyes was my first assignment putting Figma design into HTML and CSS.
+It is a video streaming website where you can purchase videos directly from the people who make them. The users of this website want to purchase videos right away, which will allow them to watch it online.
 
+- A home page showing lists of movies
 
 Built with
 ---
@@ -17,6 +19,7 @@ Built with
 Clone Repo
 ---
 https://github.com/annechh/SquareEyes.git
+````
 
 Contact
 ---
