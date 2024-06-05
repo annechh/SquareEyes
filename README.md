@@ -1,6 +1,6 @@
 ![logo](https://github.com/annechh/SquareEyes/assets/142426482/5365d670-b54f-4125-b538-678bd928a59e)
 
-# Square Eyes - HTML & CSS CA 
+Square Eyes - HTML & CSS CA 
 ---
 
 Description
