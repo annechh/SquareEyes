@@ -10,6 +10,7 @@ A video streaming website where you can purchase high-quality videos directly fr
 The website should emphasise that you can easily discover great collections or browse through different categories to find films.
 
 Site architecture:
+---
 - Home
 - List of Videos
 - A video page showing the product details (product details such as the description of the product, price and add to cart button)
