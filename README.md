@@ -2,7 +2,7 @@
 
 Square Eyes - HTML & CSS CA 
 ---
-SquareEyes was my first assignment putting Figma design into coding using HTML and CSS.
+SquareEyes was my first assignment to put into practice everything I’ve learned about HTML and CSS over this course by bringing my design alive.
 
 Description
 ---
